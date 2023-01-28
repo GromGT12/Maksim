@@ -1,5 +1,7 @@
 package Home_work;
 
+// Нужно форматирование кода
+
 class Lection2task1  {
         public static void main(String[] args) {
 
