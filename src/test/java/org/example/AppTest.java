@@ -4,6 +4,8 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
+// Этот класс был сгенерирован автоматически, нам он не нужен, плиз удали его и пэкэдж org.example
+
 /**
  * Unit test for simple App.
  */
