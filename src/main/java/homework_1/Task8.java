@@ -2,10 +2,11 @@ package homework_1;
 
 class Task8 {
     public static void main(String[] args) {
-        String HelloWorld = "Мир приветсвует";
-        String GoodbayWorld = "Мир попрощается";
+        String str1 = "HelloWorld";
+        String str2 = "GoodbayWorld";
+        String str3 = str1 + " " + str2;
 
-        System.out.println("Мир приветсвует " + "Мир попрощается");
+        System.out.println(str3);
 
     }
 }

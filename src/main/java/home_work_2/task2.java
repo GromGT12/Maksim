@@ -5,9 +5,9 @@ public class task2 {
 
         int i = Integer.parseInt("-78945627");
         double d = Double.parseDouble("-8965.876655");
-        Short s = Short.parseShort("12587");
-        Byte b = Byte.parseByte("77");
-        Float f = Float.parseFloat("123.6789");
+        short s = Short.parseShort("12587");
+        byte b = Byte.parseByte("77");
+        float f = Float.parseFloat("123.6789");
 
         System.out.println(i);
         System.out.println(d);
