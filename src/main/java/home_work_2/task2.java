@@ -1,5 +1,7 @@
 package home_work_2;
 
+// названия классов должны начинаться с большой буквы
+// также переименую пакет в homework_2, чтобы все было одинаково
 public class task2 {
     public static void main(String[] args) {
 
