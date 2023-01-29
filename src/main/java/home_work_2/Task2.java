@@ -1,6 +1,6 @@
 package home_work_2;
 
-public class task2 {
+public class Task2 {
     public static void main(String[] args) {
 
         int i = Integer.parseInt("-78945627");
