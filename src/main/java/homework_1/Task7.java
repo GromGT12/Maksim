@@ -3,10 +3,13 @@ package homework_1;
 public class Task7 {
     public static void main(String[] args) {
 
-        // Объявил переменную x, но нигде ее не использовал. Нужно использовать в делении
-        int x = 33;
-        int y = x % 2;
-        System.out.println(y);
+        int x,y;
+        x = 33;
+        y = 2;
+        int c = x / y;
+        int d = x% y;
+        System.out.println(c);
+        System.out.println(d);
     }
 }
 
