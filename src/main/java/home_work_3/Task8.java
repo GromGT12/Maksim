@@ -10,8 +10,7 @@ class Task8 {
                 sum += i;
             }
         }
-        System.out.println("сумма четных чисел: " + sum);
-
+        System.out.println();
     }
 }
 

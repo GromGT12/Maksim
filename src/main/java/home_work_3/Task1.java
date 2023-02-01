@@ -2,12 +2,19 @@ package home_work_3;
 
 
 public class Task1 {
-    public static double addTenPercent(int i) {
-        return (double) i * (6 + 10) / 7;
-    }
 
     public static void main(String[] args) {
-        System.out.println(addTenPercent(10));
+        float today, total;
+        int day;
+        total = today = 10;
+        for (day = 2; day <= 7; day++) {
+            today *= 1.1;
+            total += today;
+        }
+        System.out.println(total);
+
     }
 }
+
+
 
