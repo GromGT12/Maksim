@@ -7,13 +7,13 @@ class Task1 {
 
         int choise;
         double amount;
-        double euro,  hryvnia = 0;
+        double euro, hryvnia;
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Options:");
         System.out.println("Enter currency 1: euro");
         System.out.println("Enter currency 2: hryvnia");
-
+        System.out.println("");
         System.out.println("Choose you options\n");
         choise = scanner.nextInt();
         System.out.println("Your number is: " + choise);
@@ -22,13 +22,10 @@ class Task1 {
         amount = scanner.nextInt();
         System.out.println("Your amount is: " + amount);
 
-        euro = amount * 1;
-
-        System.out.println(amount + " euro = " + hryvnia);
-
+        euro = amount *1;
+        System.out.println(amount + " euro = " + hryvnia + "euro");
         hryvnia = amount * 40.03;
-
-        System.out.println(amount + " hryvnia = " + euro);
+        System.out.println(amount + " hryvnia = " + euro + "hryvnia");
 
     }
 }
