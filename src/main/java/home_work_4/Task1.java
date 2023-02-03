@@ -2,12 +2,12 @@ package home_work_4;
 
 import java.util.Scanner;
 
-public class Task1 {
+class Task1 {
     public static void main(String[] args) {
 
         int choise;
-        int amount;
-        int euro,hryvnia;
+        double amount;
+        double euro,  hryvnia = 0;
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Options:");
@@ -22,13 +22,13 @@ public class Task1 {
         amount = scanner.nextInt();
         System.out.println("Your amount is: " + amount);
 
-        euro = amount * 4.70;
+        euro = amount * 1;
 
-        System.out.println(amount + " euro = " + hryvnia + "euro");
+        System.out.println(amount + " euro = " + hryvnia);
 
-        hryvnia = amount * 0.025;
+        hryvnia = amount * 40.03;
 
-        System.out.println(amount + " hryvnia = " + euro + "euro");
+        System.out.println(amount + " hryvnia = " + euro);
 
     }
 }
