@@ -8,6 +8,7 @@ public class Task1 {
         int choise;
         int amount;
         int euro,hryvnia;
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Options:");
         System.out.println("Enter currency 1: euro");
