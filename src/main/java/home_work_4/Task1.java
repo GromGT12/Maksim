@@ -6,8 +6,8 @@ class Task1 {
     public static void main(String[] args) {
 
         int choise;
-        double amount;
-        double euro, hryvnia;
+        double euro, hryvnia = 0;
+        double rate = 40;
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Options:");
@@ -19,10 +19,14 @@ class Task1 {
         System.out.println("Your number is: " + choise);
 
         System.out.println("Enter the amount you want to convert:");
-        amount = scanner.nextInt();
+        double amount = scanner.nextDouble();
         System.out.println("Your amount is: " + amount);
 
-        euro = amount *1;
+        // если выбрали режим 1: покупаем евро, значит надо amount/rate и вывести результат
+        // иначе если выбрали режим 2: покупаем гривну, значит надо amount*rate b и выводим
+        // если режим не 1 и не 2 - выводим сообщение об неверном режиме
+
+        euro = amount * 1;
         System.out.println(amount + " euro = " + hryvnia + "euro");
         hryvnia = amount * 40.03;
         System.out.println(amount + " hryvnia = " + euro + "hryvnia");
