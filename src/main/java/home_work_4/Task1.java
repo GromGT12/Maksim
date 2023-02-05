@@ -22,10 +22,14 @@ public class Task1 {
         System.out.println("Your number is: " + choise);
 
         System.out.println("Enter the amount you want to convert:");
+
         choise = scanner.nextDouble();
         System.out.println("Your amount is: " + choise);
 
         double cyrrency = scanner.nextDouble();
+        double amount = scanner.nextDouble();
+        System.out.println("Your amount is: " + amount);
+
 
 
         System.out.println("В какую валюту хотите конвертировать? Доступные варианты: 1 - Euro, 2 - Uah, 3 - результат об ошибке");
