@@ -9,7 +9,7 @@ public class Task1 {
         Scanner scanner = new Scanner(System.in);
         double rate = 40;
 
-        System.out.println("В какую валюту хотите конвертировать? Доступные варианты: 1 - Euro, 2 - Uah,");
+        System.out.println("В какую валюту хотите конвертировать? Доступные варианты: 1 - Euro 2 - Uah");
         int mode = scanner.nextInt();
         System.out.println("Введите сумму");
         double amount = scanner.nextDouble();
