@@ -18,7 +18,7 @@ public class Task1 {
             double result = amount / rate;
             System.out.println(result + "Euro");
         } else if (mode == 2) {
-            System.out.println("Если выбрали режим 2: покупаем uah");
+            System.out.println("Если выбрали вариант 2: покупаем uah");
             double result = amount * rate;
             System.out.println(result);
 
