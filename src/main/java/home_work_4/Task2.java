@@ -13,8 +13,8 @@ class Task2 {
         boolean regularCustomer;
 
         System.out.println("Enter engine size in cm3");
-        int enginecapacity = scanner.nextInt();
-        insurancePrice = enginecapacity * rate;
+        int enginecapacity = scanner.nextInt();   // переменные принято называть в camel-case, то есть engineCapacity
+        insurancePrice = enginecapacity * rate;   // такое же действие ты делаешь в строке 21, оставь только одно
 
         System.out.println("Are we insured?? Enter 'true' or 'false':");
         regularCustomer = scanner.nextBoolean();
