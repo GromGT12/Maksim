@@ -2,6 +2,7 @@ package home_work_5;
 
 import java.util.Arrays;
 
+// Все хорошо
 class Task3 {
     public static void main(String[] args) {
         int[] mas = new int[8];

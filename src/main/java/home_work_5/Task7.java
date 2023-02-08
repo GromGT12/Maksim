@@ -2,6 +2,7 @@ package home_work_5;
 
 import java.util.Arrays;
 
+// здесь нужно отформатировать код
 class Task7 {
         public static void main(String[] args) {
             int [] mas = {1, 5, 9, 88, 8};
