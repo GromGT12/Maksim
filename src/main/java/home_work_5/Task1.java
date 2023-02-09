@@ -1,10 +1,27 @@
 package home_work_5;
 
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 class Task1 {
 
     public static void main(String[] args) {
         int[] array = new int[]{10, 88, 120};
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите наибольшое число массива:");
+        int numbermax = scanner.nextInt();
+        System.out.println("Введите наименьшее сисло массива:");
+        int numbermin = scanner.nextInt();
+        int[] number = new int[]{numbermax, numbermin};
+        Arrays.sort(number);
+
+        int sum = 0;
+        for (int x : number) {
+            sum += x;
+        }
+        System.out.println("Сумма: " + sum);
 
         int max = getMax(array);
         System.out.println("Maximum Value is: " + max);
@@ -12,7 +29,6 @@ class Task1 {
         int min = getMin(array);
         System.out.println("Minimum Value is: " + min);
     }
-
     public static int getMax(int[] inputArray) {
         int maxValue = inputArray[0];
         for (int i = 1; i < inputArray.length; i++) {
@@ -31,6 +47,8 @@ class Task1 {
             }
         }
         return minValue;
+
     }
+
 }
 
