@@ -1,12 +1,12 @@
 package home_work_5;
 
-
 import java.util.Arrays;
 import java.util.Scanner;
 
 class Task1 {
 
     public static void main(String[] args) {
+
         int[] array = new int[]{10, 88, 120};
 
         Scanner scanner = new Scanner(System.in);
@@ -29,6 +29,7 @@ class Task1 {
         int min = getMin(array);
         System.out.println("Minimum Value is: " + min);
     }
+
     public static int getMax(int[] inputArray) {
         int maxValue = inputArray[0];
         for (int i = 1; i < inputArray.length; i++) {

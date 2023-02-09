@@ -1,6 +1,5 @@
 package home_work_5;
 
-
 class Task2 {
     public static void main(String[] args) {
         double[] nums = {10.1, 11.2, 12.3, 13.4, 14.5};

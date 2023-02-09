@@ -20,6 +20,8 @@ class Task7 {
                 }
             }
         }
+
         System.out.println(Arrays.toString(mas));
     }
 }
+
