@@ -11,10 +11,10 @@ class Task1 {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите наибольшое число массива:");
-        int numbermax = scanner.nextInt();
+        int numberMax = scanner.nextInt();
         System.out.println("Введите наименьшее сисло массива:");
-        int numbermin = scanner.nextInt();
-        int[] number = new int[]{numbermax, numbermin};
+        int numberMin = scanner.nextInt();
+        int[] number = new int[]{numberMax, numberMin};
         Arrays.sort(number);
 
         int sum = 0;
