@@ -2,15 +2,15 @@ package home_work_7;
 
 class Car {
 
-    public static final int NUMBEROFDOORS=4;
+    public static final int NUMBER_OF_WHEElS = 4;
     private String brand;
     private String model;
-    private int numberofDoors;
+    private int numberOfDoors;
 
-    public Car( String brand, String model, int numberOfdoors) {
+    public Car(String brand, String model, int numberOfdoors) {
         this.brand = brand;
         this.model = model;
-        this.numberofDoors = numberOfdoors;
+        this.numberOfDoors = numberOfdoors;
     }
 
     public String getBrand() {
@@ -29,13 +29,12 @@ class Car {
         this.model = model;
     }
 
-    public int getNumberofDoors() {
-        int numberOfdoors = 0;
-        return numberOfdoors;
+    public int getNumberOfDoors() {
+        return numberOfDoors;
     }
 
-    public void setNumberofDoors(int numberofDoors) {
-        this.numberofDoors = numberofDoors;
+    public void setNumberOfDoors(int numberOfDoors) {
+        this.numberOfDoors = numberOfDoors;
     }
 
     @Override
@@ -43,7 +42,7 @@ class Car {
         return "car{" +
                 "brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
-                ", numberOfdoors=" + numberofDoors +
+                ", numberOfdoors=" + numberOfDoors +
                 '}';
     }
 }
