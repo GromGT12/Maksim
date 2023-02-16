@@ -11,13 +11,10 @@ class Task1 {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите наибольшое число массива:");
-        int numbermax = scanner.nextInt();
+        int numberMax = scanner.nextInt();
         System.out.println("Введите наименьшее сисло массива:");
-        int numbermin = scanner.nextInt();
-        int[] number = new int[]{numbermax, numbermin};
-
-        // здесь ты сортируешь массив number, в котором есть только два элемента, которые ввел пользователь. Нужно
-        // чтобы пользователь ввел три числа и работать с этими числами
+        int numberMin = scanner.nextInt();
+        int[] number = new int[]{numberMax, numberMin};
         Arrays.sort(number);
 
         int sum = 0;
@@ -26,8 +23,6 @@ class Task1 {
         }
         System.out.println("Сумма: " + sum);
 
-        // а здесь ты ищешь максимальное значение в массиве, который создан в строке 10. его не нужно создавать заранее,
-        // его нужно собрать из чисел, которые ввел пользователь
         int max = getMax(array);
         System.out.println("Maximum Value is: " + max);
 
