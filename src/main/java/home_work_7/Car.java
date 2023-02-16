@@ -7,10 +7,10 @@ class Car {
     private String model;
     private int numberOfDoors;
 
-    public Car(String brand, String model, int numberOfdoors) {
+    public Car(String brand, String model, int numberOfDoors) {
         this.brand = brand;
         this.model = model;
-        this.numberOfDoors = numberOfdoors;
+        this.numberOfDoors = numberOfDoors;
     }
 
     public String getBrand() {

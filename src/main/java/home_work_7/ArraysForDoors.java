@@ -1,6 +1,6 @@
 package home_work_7;
 
-public class ArraysForCar {
+public class ArraysForDoors {
 
     public static void main(String[] args) {
         Car[] audis = new Car[5];
