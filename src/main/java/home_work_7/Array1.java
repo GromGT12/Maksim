@@ -11,12 +11,9 @@ class Array1 {
 
         for (int i = 0; i < mas1.length; i++) {
             if (mas1[i] % 2 != 0) {
-                resultArray[i] = mas1.length;
-            }
-        }
-        for (int i = 0; i < mas1.length; i++) {
-            if (mas1[i] % 2 == 0) {
                 resultArray[i] = mas1[i];
+            } else {
+                resultArray[i] = mas1[i] * 5;
             }
         }
         System.out.println(Arrays.toString(resultArray));
