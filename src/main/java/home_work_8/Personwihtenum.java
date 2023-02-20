@@ -8,11 +8,11 @@ public class Personwihtenum {
     private String surname;
     private int yearOfBirth;
     // поле должно быть типа PersonGEnder
-    private String gender;
+    private PersonGender gender;
     // поле должно быть типа PersonFamilyStatus
     private String familyStatus;
 
-    public Personwihtenum(String name, String surname, int yearOfBirth, String gender, String famalyStatus) {
+    public Personwihtenum(String name, String surname, int yearOfBirth, PersonGender gender, String famalyStatus) {
         this.name = name;
         this.surname = surname;
         this.yearOfBirth = yearOfBirth;
