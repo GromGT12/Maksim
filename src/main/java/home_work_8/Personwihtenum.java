@@ -1,11 +1,15 @@
 package home_work_8;
 
 import java.util.Objects;
+// Плиз, переименуй класс в просто Person
+// нужно отформатировать код
 public class Personwihtenum {
     private String name;
     private String surname;
     private int yearOfBirth;
+    // поле должно быть типа PersonGEnder
     private String gender;
+    // поле должно быть типа PersonFamilyStatus
     private String familyStatus;
 
     public Personwihtenum(String name, String surname, int yearOfBirth, String gender, String famalyStatus) {
