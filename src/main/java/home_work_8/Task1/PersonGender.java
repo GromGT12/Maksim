@@ -1,6 +1,6 @@
-package home_work_8;
+package home_work_8.Task1;
 
 public enum PersonGender {
     MALE,
-    FAMALE
+    FEMALE
 }

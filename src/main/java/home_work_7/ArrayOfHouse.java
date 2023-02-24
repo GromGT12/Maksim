@@ -13,26 +13,24 @@ public class ArrayOfHouse {
         houses[6] = new House("SkyTower", 10, 10);
 
         int sumResident = 0;
-        for (int i = 0; i < houses.length; i++) {
-            House house = houses[i];
+        for (House house : houses) {
             int residentsOfHouse = house.getResidentsOfHouse();
             sumResident += residentsOfHouse;
             System.out.println(house);
         }
         System.out.println(sumResident);
-        for (int i = 0; i < houses.length; i++) {
-            House house = houses[i];
+        for (House house : houses) {
             if ("Individual".equals(house.getType())) {
                 System.out.println(house);
             }
 
         }
 
-        for (int i = 0; i < houses.length; i++) {
-            if (("SkyTower".equals(houses[i].getType())) && (houses[i].getFloors() > 5)) {
+        for (House house : houses) {
+            if (("SkyTower".equals(house.getType())) && (house.getFloors() > 5)) {
 
-                houses[i].setHeatingOn(true);
-                System.out.println("включили!:" + houses[i]);
+                house.setHeatingOn(true);
+                System.out.println("включили!:" + house);
             }
         }
     }

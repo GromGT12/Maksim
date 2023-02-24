@@ -1,4 +1,4 @@
-package home_work_8;
+package home_work_8.Task1;
 
 public class Recommendator {
     public void recommend(Person[] people) {
@@ -11,7 +11,7 @@ public class Recommendator {
                     System.out.println("Уважаемый " + name + ", не желаете познакомится с девушкой?");
                 }
                 if (person.getFamilyStatus().equals(PersonFamilyStatus.SINGLE)) {
-                    if (person.getGender().equals(PersonGender.FAMALE)) {
+                    if (person.getGender().equals(PersonGender.FEMALE)) {
                         String name = person.getName();
                         System.out.println("Уважаемая " + name + ", не желаете познакомится с парнем?");
                     }
@@ -28,7 +28,7 @@ public class Recommendator {
                     System.out.println("Уважаемый " + name + ", не желаете познакомится с девушкой?");
                 }
                 if (person.getFamilyStatus().equals(PersonFamilyStatus.MARRIED)) {
-                    if (person.getGender().equals(PersonGender.FAMALE)) {
+                    if (person.getGender().equals(PersonGender.FEMALE)) {
                         String name = person.getName();
                         System.out.println("Уважаемая " + name + ", не желаете познакомится с парнем?");
                     }

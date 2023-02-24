@@ -1,4 +1,4 @@
-package home_work_8;
+package home_work_8.Task1;
 
 import java.util.Objects;
 
