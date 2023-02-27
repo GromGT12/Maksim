@@ -1,5 +1,6 @@
-package home_work_9.Task2;
+package home_work_9;
 
+import home_work_9.Task2.Tare;
 /*Task 2
        * Таромат. Создайте класс Tare, в котором должны быть следующие поля: название продукта и материал. Материалов может быть 3 вида:
        * пластик, стекло, алюминий.
@@ -19,33 +20,46 @@ package home_work_9.Task2;
         В классе Application вызовите этов метод, а потом распечатайте полученный чек.
 */
 
-import home_work_9.Material;
+public class TaroMat {
+    public void printCheck(Tare[] tarese) {
+        int plastic = 10;
+        int glass = 15;
+        int aluminium = 15;
+        int sum = 0;
 
-import java.util.Objects;
-public class Tare {
-    private String name;
-    private Material material;
+        int plasticNumber = 0;
+        int glassNumber = 0;
+        int aluminiumNumber =0;
 
+        for(int i =0; i<tarese.length;i++) {
+            Tare tare = tarese[i];
+            if (Material.PLASTIC.equals(tare.getMaterial())) {
+                sum += plastic;
+                plasticNumber++;
+            }
+            if (Material.ALUMINIUM.equals(tare.getMaterial())) {
+                sum += aluminium;
+                aluminiumNumber++;
+            }
+            if (Material.GLASS.equals(tare.getMaterial())) {
+                sum += glass;
+                glassNumber++;
+            }
+        }
 
-    public Tare(String name, Material material) {
-        this.name = name;
-        this.material = material;
-
+        System.out.println("Вы сдали пластиковых бутылок: "
+                + plasticNumber + ", стеклянных бутылок: " + glassNumber +
+                ",  алюминиевых банок: " +aluminiumNumber + ". Ваш чек: " + sum);
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Material getMaterial() {
-        return material;
-    }
-
-    public void setMaterial(Material material) {
-        this.material = material;
-    }
 }
+
+
+
+
+
+
+
+
+
+
