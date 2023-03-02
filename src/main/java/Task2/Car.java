@@ -24,7 +24,7 @@ public class Car {
     private boolean gaz;
 
 
-    public void jechac() {
+    public void jechac() { //ехать
         if(engine.isAction()&& transmission.isJedynkaBiezacyBieg() && gaz)
         System.out.println("Автомобиль начал движение");
     }

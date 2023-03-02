@@ -4,7 +4,7 @@ public class Engine {
     private boolean action;
     public void SilnikOn() {
         if (action) {
-            System.out.println("Silnik uruchomić");
+            System.out.println("Silnik uruchomić"); //тут я использовал польский легче понимается. Двигатель запустить
         } else {
         }
         this.action = true;
@@ -12,7 +12,7 @@ public class Engine {
     public void SilnikOff() {
         if (action) {
             this.action = false;
-            System.out.println("Silnic zgasic");
+            System.out.println("Silnik zgasic"); // тут двигатель заглушить
         } else {
         }
     }
