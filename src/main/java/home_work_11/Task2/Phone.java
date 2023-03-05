@@ -11,7 +11,7 @@ public class Phone {
         String fromChars = String.valueOf(chars);
         System.out.println(fromChars);
 
-        String format = String.format("У меня в руках iPhone, %s. Модель SE 2020", abstractPhone4.getName());
+        String format = String.format("У меня в руках iPhone, %s.", abstractPhone4.getName());
         System.out.println(format);
 
         String Upper = "PingWit";

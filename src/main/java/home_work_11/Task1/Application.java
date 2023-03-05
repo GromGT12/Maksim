@@ -17,6 +17,7 @@ public class Application {
         AbstractPhone abstractPhone4 = new SmartPhone("iphone SE 2020:");
         abstractPhone4.makeCall();
         abstractPhone4.recieveCall();
+
     }
 }
 
