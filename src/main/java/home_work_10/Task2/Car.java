@@ -52,8 +52,7 @@ public class Car {
     public int zwiekszonyBieg() {
         if (moving) {
             transmission.zwiekszonybieg();
-            // вот эту строчку не понял пока что
-            int speed = 20 - transmission.getBiezacyBieg();
+            int speed = 20 * transmission.getBiezacyBieg();
             System.out.println("speed: " + transmission.zmniejszonybieg());
             return transmission.getBiezacyBieg();
         }
@@ -62,7 +61,7 @@ public class Car {
     public int zmniejszonyBieg() {
         if(moving)
         return transmission.zmniejszonybieg();
-        int speed = 20 * transmission.getBiezacyBieg();
+        int speed = 20 - transmission.getBiezacyBieg();
         System.out.println("speed " + speed);
         return transmission.getBiezacyBieg();
     }

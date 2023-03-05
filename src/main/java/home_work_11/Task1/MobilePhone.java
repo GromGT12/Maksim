@@ -4,6 +4,7 @@ import javax.naming.Name;
 
 public class MobilePhone extends AbstractPhone {
 
+
     public MobilePhone(String name) {
         super(name);
     }
@@ -24,6 +25,7 @@ public class MobilePhone extends AbstractPhone {
     }
     @Override
     public void makeCall() {
+
         System.out.println("Наберу я папу...");
     }
     @Override

@@ -7,8 +7,10 @@ public class SmartPhone extends AbstractPhone{
 
     public SmartPhone(String name)
     {
+
         super(name);
     }
+
     @Override
     public void makeCall(Name name) {
 
@@ -19,17 +21,21 @@ public class SmartPhone extends AbstractPhone{
 
     }
 
+
     @Override
     public String getName(String name) {
+
         return super.getName();
     }
 
     @Override
     public void makeCall() {
+        System.out.println("Голосовой набор маме...");
 
     }
     @Override
     public void recieveCall() {
+        System.out.println("Максим звонит ответить:");
 
     }
 }

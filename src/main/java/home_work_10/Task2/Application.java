@@ -15,7 +15,6 @@ public class Application {
         car.zwiekszonyBieg();
         car.zwiekszonyBieg();
         car.zwiekszonyBieg();
-        car.zmniejszonyBieg();
         car.silnikOff();
 
         car.jechac();
