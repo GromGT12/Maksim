@@ -1,4 +1,4 @@
-package Task2;
+package home_work_10.Task2;
 
 /*
 Есть класс автомобиль. У автомобиля есть коробка передач и мотор.
@@ -22,31 +22,54 @@ public class Car {
     private Engine engine;
     private Transmission transmission;
     private boolean gaz;
+    private boolean moving;
 
+    public Car() {
+        this.engine = new Engine();
+        this.transmission = new Transmission();
+    }
 
     public void jechac() { //ехать
-        if(engine.isAction()&& transmission.isJedynkaBiezacyBieg() && gaz)
-        System.out.println("Автомобиль начал движение");
-    }
-    public void SilnikOn() {
-        engine.SilnikOn();
-    }
-
-    public void SilnikOff() {
-        engine.SilnikOff();
-    }
-
-    public int zwiekszonybieg() {
-        return transmission.zwiekszonybieg();
+        if (engine.isStarted() && transmission.getBiezacyBieg() == 1 && gaz) {
+            System.out.println("Автомобиль начал движение");
+            int speed = 20 * transmission.getBiezacyBieg();
+            System.out.println("speed: " + speed);
+            moving = true;
+        } else {
+            System.out.println("Автомобиль не едет");
+        }
     }
 
-    public int zmniejszonybieg() {
+    public void silnikOn() {
+        engine.silnikOn();
+    }
+
+    public void silnikOff() {
+        engine.silnikOff();
+    }
+
+
+    public int zwiekszonyBieg() {
+        if (moving) {
+            transmission.zwiekszonybieg();
+            int speed = 20 - transmission.getBiezacyBieg();
+            System.out.println("speed: " + transmission.zmniejszonybieg());
+            return transmission.getBiezacyBieg();
+        }
         return transmission.zmniejszonybieg();
-
+    }
+    public int zmniejszonyBieg() {
+        if(moving)
+        return transmission.zmniejszonybieg();
+        int speed = 20 * transmission.getBiezacyBieg();
+        System.out.println("speed " + speed);
+        return transmission.getBiezacyBieg();
     }
 
-    public boolean isGaz() {
+    public boolean pushGaz() {
         gaz = true;
         return gaz;
     }
+
 }
+

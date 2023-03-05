@@ -2,7 +2,6 @@ package home_work_3;
 
 class Task8 {
     public static void main(String[] args) {
-        int Number = 100;
         int evenSum = 0;
         int oddSum = 0;
         for (int i = 1; i <= 100; i++) {
