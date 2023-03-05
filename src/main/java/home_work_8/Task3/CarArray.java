@@ -9,6 +9,7 @@ public class CarArray {
         Car car5 = new Car("passenger", "TR21SDQ", 2, 1800);
 
         Car[] cars = new Car[] {car, car2, car3, car4, car5};
+        // класс carService тоже не закоммитил
         CarServise carServise = new CarServise();
         carServise.CarServise();
 

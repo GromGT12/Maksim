@@ -40,6 +40,8 @@ public class RadioPhone extends AbstractPhone{
         return super.toString();
     }
 
+    // вот это переопределение я не совсем понимаю, расскажи плиз, для чего так сделал.
+    // Этот метод можно и не переопределять, в классе AbstractPhone он норм расписан
     @Override
     public String getName(String name) {
         return null;

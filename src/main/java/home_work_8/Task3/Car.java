@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class Car {
 
+    // не могу найти класс CarType в проекте, точнее он есть, но пустой, надо закоммитить
     private CarType type;
     private String GovernmentNumber;
     private int quantityPassanger;

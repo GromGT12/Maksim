@@ -2,6 +2,7 @@ package home_work_11.Task1;
 
 import javax.naming.Name;
 
+// здесь нужно форматирование
 public class SmartPhone extends AbstractPhone{
 
     public SmartPhone(String name)
