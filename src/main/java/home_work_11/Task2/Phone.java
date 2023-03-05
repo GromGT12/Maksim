@@ -1,7 +1,7 @@
-package Task2;
+package home_work_11.Task2;
 
-import Task1.AbstractPhone;
-import Task1.SmartPhone;
+import home_work_11.Task1.AbstractPhone;
+import home_work_11.Task1.SmartPhone;
 
 public class Phone {
     public static void main(String[] args) {
