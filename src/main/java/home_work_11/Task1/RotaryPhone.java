@@ -1,18 +1,16 @@
 package home_work_11.Task1;
 
-import javax.naming.Name;
-
-public class RotaryPhone extends AbstractPhone{
-
+public class RotaryPhone extends AbstractPhone {
 
     public RotaryPhone(String name) {
         super(name);
     }
+
     @Override
     public void makeCall() {
         System.out.println("Крутим барабан чтобы позвонить...");
-
     }
+
     @Override
     public void recieveCall() {
         System.out.println("Нужно ответить кто-то звонит:");
@@ -26,18 +24,6 @@ public class RotaryPhone extends AbstractPhone{
     @Override
     public String getName(String name) {
         return null;
-    }
-
-    @Override
-    public void makeCall(Name name) {
-        System.out.println(getName());
-
-    }
-
-    @Override
-    public void recieveCall(Name name) {
-        System.out.println(getName());
-
     }
 
     @Override

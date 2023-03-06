@@ -16,9 +16,9 @@ public class Phone {
         System.out.println(format);
 
         // плиз, переменные назвай с маленькой буквы
-        String Upper = "PingWit";
-        String Lower = "pingWit";
-        System.out.println(Upper.equals(Lower));
+        String upper = "PingWit";
+        String lower = "pingWit";
+        System.out.println(upper.equals(lower));
 
         String a = "MAKSYM".toLowerCase();
         String b = "maksym".toUpperCase();
@@ -26,12 +26,12 @@ public class Phone {
         System.out.println(b);
 
         // плиз сделай название переменной покороче
-        String hellodarknessmyoldfriendspace = "  _hello darkness my old friend_ ";
-        String strip = hellodarknessmyoldfriendspace.strip();
+        String smilespace = "  _hello darkness my old friend_ ";
+        String strip = smilespace.strip();
         System.out.println(strip);
 
-        String myFontello = "";
-        String myFontello2 = " "; //я тут делаю без пробела и все равно true
+        String myFontello = " ";
+        String myFontello2 = " ";
         System.out.println(myFontello.isEmpty());
         System.out.println(myFontello2.isBlank());
     }
