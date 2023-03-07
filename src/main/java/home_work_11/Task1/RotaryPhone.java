@@ -15,19 +15,4 @@ public class RotaryPhone extends AbstractPhone {
     public void recieveCall() {
         System.out.println("Нужно ответить кто-то звонит:");
     }
-
-    @Override
-    public String toString() {
-        return super.toString();
-    }
-
-    @Override
-    public String getName(String name) {
-        return null;
-    }
-
-    @Override
-    public String getName() {
-        return super.getName();
-    }
 }

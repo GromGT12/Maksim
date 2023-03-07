@@ -2,14 +2,8 @@ package home_work_11.Task1;
 
 public class MobilePhone extends AbstractPhone {
 
-
-    MobilePhone(String name) {
+    public MobilePhone(String name) {
         super(name);
-    }
-
-    @Override
-    public String getName(String name) {
-        return null;
     }
 
     @Override

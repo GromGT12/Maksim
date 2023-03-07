@@ -3,6 +3,7 @@ package home_work_11.Task2;
 import home_work_11.Task1.AbstractPhone;
 import home_work_11.Task1.SmartPhone;
 
+// называть классы по сути
 public class Phone {
     public static void main(String[] args) {
         AbstractPhone abstractPhone4 = new SmartPhone("iphone SE 2020:");
@@ -13,6 +14,7 @@ public class Phone {
         System.out.println(fromChars);
 
         String format = String.format("У меня в руках iPhone, %s.", abstractPhone4.getName());
+        String.format("У меня в руках iPhone, %s. цена: %d", abstractPhone4.getName(), 12);
         System.out.println(format);
 
         // плиз, переменные назвай с маленькой буквы

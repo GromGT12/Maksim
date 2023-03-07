@@ -3,15 +3,14 @@ package home_work_11.Task1;
 // здесь нужно форматирование
 public class SmartPhone extends AbstractPhone {
 
-    public SmartPhone(String name) {
+    private int screen;
 
+    public SmartPhone(String name) {
         super(name);
     }
 
-    @Override
-    public String getName(String name) {
-
-        return super.getName();
+    public int getScreen() {
+        return screen;
     }
 
     @Override

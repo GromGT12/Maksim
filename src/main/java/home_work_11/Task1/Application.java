@@ -2,21 +2,33 @@ package home_work_11.Task1;
 
 public class Application {
     public static void main(String[] args) {
-        AbstractPhone abstractPhone = new RotaryPhone("Retro:");
-        abstractPhone.makeCall();
-        abstractPhone.recieveCall();
+        RotaryPhone rotaryPhone = new RotaryPhone("Retro:");
+        rotaryPhone.makeCall();
+        rotaryPhone.recieveCall();
         System.out.println();
-        AbstractPhone abstractPhone2 = new MobilePhone("Nokia 3310:");
-        abstractPhone2.makeCall();
-        abstractPhone2.recieveCall();
+
+        MobilePhone mobilePhone = new MobilePhone("Nokia 3310:");
+        mobilePhone.makeCall();
+        mobilePhone.recieveCall();
         System.out.println();
-        AbstractPhone abstractPhone3 = new RadioPhone("Philips SE 150:");
-        abstractPhone3.makeCall();
-        abstractPhone3.recieveCall();
+
+        RadioPhone radioPhone = new RadioPhone("Philips SE 150:");
+        radioPhone.makeCall();
+        radioPhone.recieveCall();
         System.out.println();
-        AbstractPhone abstractPhone4 = new SmartPhone("iphone SE 2020:");
-        abstractPhone4.makeCall();
-        abstractPhone4.recieveCall();
+
+        SmartPhone smartPhone = new SmartPhone("iphone SE 2020:");
+        smartPhone.makeCall();
+        smartPhone.recieveCall();
+        int screen = smartPhone.getScreen();
+
+        Phone[] phones = new Phone[]{rotaryPhone, mobilePhone, radioPhone, smartPhone};
+
+        System.out.println("----------------------------------------------------------");
+        for (Phone phone : phones) {
+            phone.makeCall();
+            phone.recieveCall();
+        }
 
     }
 }

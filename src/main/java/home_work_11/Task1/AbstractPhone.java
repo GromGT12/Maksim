@@ -4,13 +4,22 @@ package home_work_11.Task1;
 public abstract class AbstractPhone implements Phone {
     private String name;
 
-    AbstractPhone(String name) {
+    protected AbstractPhone(String name) {
         this.name = name;
     }
 
     public String getName() {
-
         return name;
+    }
+
+    @Override
+    public void makeCall() {
+        System.out.println("Базовое поведение телефона");
+    }
+
+    @Override
+    public void recieveCall() {
+        System.out.println("Базовое поведение телефона");
     }
 
     @Override
@@ -19,7 +28,5 @@ public abstract class AbstractPhone implements Phone {
                 "name='" + name + '\'' +
                 '}';
     }
-
-    public abstract String getName(String name);
 }
 

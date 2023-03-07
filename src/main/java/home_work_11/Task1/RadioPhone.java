@@ -12,11 +12,6 @@ public class RadioPhone extends AbstractPhone {
     }
 
     @Override
-    public String getName(String name) {
-        return null;
-    }
-
-    @Override
     public void makeCall() {
         System.out.println("Наберу я совего друга...");
     }
