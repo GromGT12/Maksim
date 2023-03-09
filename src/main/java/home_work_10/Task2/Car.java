@@ -59,6 +59,7 @@ public class Car {
         return transmission.zmniejszonybieg();
     }
     public int zmniejszonyBieg() {
+
         if(moving)
         return transmission.zmniejszonybieg();
         int speed = 20 - transmission.getBiezacyBieg();

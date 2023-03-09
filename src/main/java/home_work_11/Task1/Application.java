@@ -20,7 +20,6 @@ public class Application {
         SmartPhone smartPhone = new SmartPhone("iphone SE 2020:");
         smartPhone.makeCall();
         smartPhone.recieveCall();
-        int screen = smartPhone.getScreen();
 
         Phone[] phones = new Phone[]{rotaryPhone, mobilePhone, radioPhone, smartPhone};
 

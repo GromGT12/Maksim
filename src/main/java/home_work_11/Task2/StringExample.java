@@ -4,7 +4,7 @@ import home_work_11.Task1.AbstractPhone;
 import home_work_11.Task1.SmartPhone;
 
 // называть классы по сути
-public class Phone {
+public class StringExample {
     public static void main(String[] args) {
         AbstractPhone abstractPhone4 = new SmartPhone("iphone SE 2020:");
 

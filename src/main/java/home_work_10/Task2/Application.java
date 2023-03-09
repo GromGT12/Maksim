@@ -8,16 +8,15 @@ public class Application {
         car.zwiekszonyBieg();
         car.pushGaz();
         car.jechac();
-        car.zwiekszonyBieg();
-        car.zwiekszonyBieg();
-        car.zwiekszonyBieg();
-        car.zwiekszonyBieg();
-        car.zwiekszonyBieg();
-        car.zwiekszonyBieg();
-        car.zwiekszonyBieg();
+        car.zmniejszonyBieg();
+        car.zmniejszonyBieg();
+        car.zmniejszonyBieg();
+        car.zmniejszonyBieg();
+        car.zmniejszonyBieg();
+        car.zmniejszonyBieg();
         car.silnikOff();
 
-        car.jechac();
+        
 
 
 
