@@ -6,13 +6,11 @@ public class ArrayNumber {
         for (int i = 0; i <Number.length; i++) {
             {
                 try {
-                System.out.println(100/Number[9]);
+                System.out.println(100/Number[i]-9);
                 }catch (ArithmeticException exception) {
-                    System.out.println("При обработке элемента №9 возникла ошибка: " + exception.getMessage());
-                }
+                    System.out.println("При обработке элемента №9 возникла ошибка: " + exception.getMessage());}
 
-                }
-
+            }
         }
     }
 }
