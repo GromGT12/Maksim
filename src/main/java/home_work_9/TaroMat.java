@@ -21,7 +21,7 @@ import home_work_9.Task2.Tare;
 */
 
 public class TaroMat {
-    public void printCheck(Tare[] tarese) {
+    public void printCheck(Tare[] tares) {
         int plastic = 10;
         int glass = 15;
         int aluminium = 15;
@@ -31,8 +31,8 @@ public class TaroMat {
         int glassNumber = 0;
         int aluminiumNumber =0;
 
-        for(int i =0; i<tarese.length;i++) {
-            Tare tare = tarese[i];
+        for(int i =0; i<tares.length;i++) {
+            Tare tare = tares[i];
             if (Material.PLASTIC.equals(tare.getMaterial())) {
                 sum += plastic;
                 plasticNumber++;
