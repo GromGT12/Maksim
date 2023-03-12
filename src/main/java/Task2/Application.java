@@ -1,21 +1,13 @@
 package Task2;
 
-import java.io.IOException;
-
 public class Application {
     public static void main(String[] args) {
-        Router router = new Router();
-        String internet = null;
-        try {
-            internet = router.generateReport("D-Link");
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        Router router = new Router("Orange");
+        GameConsole gameConsole = new GameConsole("Xbox", "One");
+        for (int i = 0; i < 6; i++) {
+            String result = router.connect(gameConsole.getModel() + gameConsole.getName());
+            System.out.println(result);
         }
-        System.out.println(internet);
-        GameConsole gameConsole = new GameConsole("Xbox");
-        String model = gameConsole.model;
-
-
-
     }
 }
+
