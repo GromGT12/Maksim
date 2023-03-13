@@ -4,7 +4,6 @@ import org.apache.commons.lang3.StringUtils;
 
 public class StringUtilsPersonReverser implements PersonReverser {
 
-
     @Override
     public Person reversePerson(Person person) {
         String reversedName = StringUtils.reverse(person.getName());
