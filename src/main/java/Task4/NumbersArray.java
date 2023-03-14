@@ -11,12 +11,26 @@ System.out.printf -пример:  Элемент 0 массива: 4 ,
     public static void main(String[] args) {
         int[] myArray = new int[]{4, 1, -10, 15, 25, 88, 90, 133, 20, 0};
         for (int i = 0; i < myArray.length; i++) {
+            // не все пункты нахожу.
+            // 1. Распечатываем i-й элемент массива - значит что в консоль должна вывестись: Элемент номер 0 массива: 4,
+            // Элемент номер 1 массива: 1
+            // Элемент номер 2 массива: 2 и так далеее
+
+            // 2. Распечатайте результат деления элемента на 2:
+            // 4 разделить на 2 = 2
+            // 1 разделить на 2 = 0
+            // -10 разделить на 2 = -5 и так далее
+
+            // посчитать сумму всех элементов массива и вывести ее. для данного массива должно вывестись 366
+
+
+            // в этом задании обрабатывать ошибки не нужно, это просто попрактиковать работу с массивами, код снизу лучше переписать
             try {
-                System.out.printf(String.valueOf(0/(myArray[i]-4)));
-            }catch (ArithmeticException exception) {
+                System.out.printf(String.valueOf(0 / (myArray[i] - 4)));
+            } catch (ArithmeticException exception) {
                 System.out.println("При обработки элемента (4) произошла ошибочка: " + exception.getMessage());
                 int sum = 0;
-                sum+=myArray[i];
+                sum += myArray[i];
                 System.out.println(sum);
             }
         }
