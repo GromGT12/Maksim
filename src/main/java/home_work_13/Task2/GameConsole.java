@@ -1,4 +1,4 @@
-package Task2;
+package home_work_13.Task2;
 
 
 public class GameConsole {
