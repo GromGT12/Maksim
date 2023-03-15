@@ -2,8 +2,6 @@ package home_work_14.Task2;
 
 import org.apache.commons.lang3.RandomUtils;
 
-import java.awt.print.PrinterException;
-
 public class Printer {
     public void turnOn() {
         System.out.println("Включили принтер");

@@ -9,8 +9,7 @@ public class Application {
 
         System.out.println("Принтер включен");
         try {
-            //
-            Printer.print((String) document);
+            Printer.print(document);
         } finally {
             System.out.println("Выключить принтер");
             printer.turnOff();

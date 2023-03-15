@@ -16,6 +16,7 @@ import java.time.format.DateTimeFormatter;
 
 public class DateTime {
     public static void main(String[] args) {
+        // плиз, называйте переменные с маленькой буквы
         String Date = "2023-17-01";
         String Date1 = "23-2022-01";
         String Date2 = "15-07-2022";
@@ -26,14 +27,21 @@ public class DateTime {
         DateTimeFormatter firsmonths2 = DateTimeFormatter.ofPattern("yyyy-MMM-dd");
         DateTimeFormatter firsmonths3 = DateTimeFormatter.ofPattern("dd-MMMM-yyyy");
 
+        // тут вс отлично!
         LocalDate fromString = LocalDate.parse("2022-15-07", DateTimeFormatter.ofPattern("yyyy-dd-MM"));
         System.out.println(firsmonths.format(fromString));
         System.out.println(firsmonths1.format(fromString));
         System.out.println(firsmonths2.format(fromString));
         System.out.println(firsmonths3.format(fromString));
 
+        // а здесь сделайте все то же самое для строк date, date1, date2. сначала распарсите, потом выведите тремя вашими форматтерами
+
+
         LocalDateTime dataTime = LocalDateTime.now();
         System.out.println(dataTime);
+
+        // здесь подойдет пример с лекции, мне важно чтобы вы руками потрогали форматтеры
+        //DateTimeFormatter dateTimeFormatter1 = DateTimeFormatter.ofPattern("dd-MMMM-yyyy : HH/mm/ss/ms");
 
     }
 }
