@@ -5,6 +5,7 @@ public class Application {
     // private static String document = "Очень важная справка"
     private static String document = "Очень важная справка";
 
+    // метод не должен бросать PrinterUncheckedException
     public static void main(String[] args) throws PrinterUncheckedException {
         Printer printer = new Printer();
         printer.turnOn();
@@ -14,6 +15,7 @@ public class Application {
             Printer.print((String) document);
         } finally {
             System.out.println("Выключить принтер");
+            // здесь еще вызови на принтере turnOff()
         }
     }
 }

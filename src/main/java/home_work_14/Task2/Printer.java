@@ -23,6 +23,7 @@ public class Printer {
     // метод нигде не используется, а я хотел бы, чтобы он использовался в блоке finally
     // типа, неважно, получилось ли у нас распечатать документ или нет, нужно выключить принтер в любом случае
     public static void turnOff() {
+        // здесь оставь только строчку System.out.println("Выклчючаем принтер") больше ничего не нужно
         if(RandomUtils.nextBoolean()) {
             throw new PrinterUncheckedException("Выключаем принтер");
         }try {
