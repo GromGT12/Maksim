@@ -4,44 +4,29 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-/*
-В классе Application создайте строки: '2023-17-01', '23-2022-01', '15-07-2022'.
-Распарсите эти строки в объекты LocalDate, используя DateTime formatter.
-Каждую полученную дату выведите в консоль в нескольких форматах:
-01-Mar-2022, Mar-01-2022, 2022-01-Mar, 01-March-2022
-Создайте объект LocalDateTime и выведите его в консоль в каком-то нетипичном формате на ваше усмотрение.
-
- */
-
-
 public class DateTime {
     public static void main(String[] args) {
-        // плиз, называйте переменные с маленькой буквы
+
         String Date = "2023-17-01";
         String Date1 = "23-2022-01";
         String Date2 = "15-07-2022";
-
 
         DateTimeFormatter firsmonths = DateTimeFormatter.ofPattern("MMM-dd-yyyy");
         DateTimeFormatter firsmonths1 = DateTimeFormatter.ofPattern("dd-MMM-yyyy");
         DateTimeFormatter firsmonths2 = DateTimeFormatter.ofPattern("yyyy-MMM-dd");
         DateTimeFormatter firsmonths3 = DateTimeFormatter.ofPattern("dd-MMMM-yyyy");
 
-        // тут вс отлично!
-        LocalDate fromString = LocalDate.parse("2022-15-07", DateTimeFormatter.ofPattern("yyyy-dd-MM"));
-        System.out.println(firsmonths.format(fromString));
-        System.out.println(firsmonths1.format(fromString));
-        System.out.println(firsmonths2.format(fromString));
-        System.out.println(firsmonths3.format(fromString));
-
-        // а здесь сделайте все то же самое для строк date, date1, date2. сначала распарсите, потом выведите тремя вашими форматтерами
+        LocalDate date = LocalDate.parse("2023-17-01", DateTimeFormatter.ofPattern("yyy-dd-MM"));
+        LocalDate date1 = LocalDate.parse("23-2022-01", DateTimeFormatter.ofPattern("dd-yyy-MM"));
+        LocalDate date2 = LocalDate.parse("15-07-2022", DateTimeFormatter.ofPattern("dd-MM-yyy"));
+        System.out.println(firsmonths.format(date) + ":" + firsmonths1.format(date) + ":" + firsmonths2.format(date) + ":" + firsmonths3.format(date));
+        System.out.println(firsmonths.format(date1) + ":" + firsmonths1.format(date1) + ":" + firsmonths2.format(date1) + ":" + firsmonths3.format(date1));
+        System.out.println(firsmonths.format(date2) + ":" + firsmonths1.format(date2) + ":" + firsmonths2.format(date2) + ":" + firsmonths3.format(date2));
 
 
-        LocalDateTime dataTime = LocalDateTime.now();
-        System.out.println(dataTime);
-
-        // здесь подойдет пример с лекции, мне важно чтобы вы руками потрогали форматтеры
-        //DateTimeFormatter dateTimeFormatter1 = DateTimeFormatter.ofPattern("dd-MMMM-yyyy : HH/mm/ss/ms");
+        DateTimeFormatter dateTimeFormatter1 = DateTimeFormatter.ofPattern("MMMM d, yyyy HH:mm:ss");
+        LocalDateTime dateTime = LocalDateTime.now();
+        System.out.println(dateTimeFormatter1.format(dateTime));
 
     }
 }

@@ -4,5 +4,4 @@ public class DatabaseCheckedException extends Exception {
     public DatabaseCheckedException(String message) {
         super(message);
     }
-
 }

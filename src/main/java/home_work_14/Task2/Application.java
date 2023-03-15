@@ -13,8 +13,6 @@ public class Application {
         } finally {
             System.out.println("Выключить принтер");
             printer.turnOff();
-            // здесь еще вызови на принтере turnOff()
-
         }
     }
 }
