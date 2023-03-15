@@ -1,21 +1,21 @@
 package home_work_14.Task2;
 
 public class Application {
-    // здесь нужно поменять тип объекта на String и можно сразу проинициализировать его:
-    // private static String document = "Очень важная справка"
     private static String document = "Очень важная справка";
 
-    // метод не должен бросать PrinterUncheckedException
-    public static void main(String[] args) throws PrinterUncheckedException {
+    public static void main(String[] args) {
         Printer printer = new Printer();
         printer.turnOn();
+
         System.out.println("Принтер включен");
         try {
             //
             Printer.print((String) document);
         } finally {
             System.out.println("Выключить принтер");
+            printer.turnOff();
             // здесь еще вызови на принтере turnOff()
+
         }
     }
 }
