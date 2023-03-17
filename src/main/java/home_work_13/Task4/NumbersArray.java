@@ -1,5 +1,7 @@
 package home_work_13.Task4;
 
+import java.util.Arrays;
+
 public class NumbersArray {
     /*
     Создаем массив из целых чисел: {4,1,-10, 15,25, 88, 90, 133, 20, 0}
@@ -26,7 +28,7 @@ System.out.printf -пример:  Элемент 0 массива: 4 ,
             // посчитать сумму всех элементов массива и вывести ее. для данного массива должно вывестись 366
 
 
-            System.out.printf("%d", myArray[0]);
+
         }
     }
 }
