@@ -1,4 +1,5 @@
 package home_work_14.Task4;
+import java.time.LocalDate;
 /*
 Создайте класс Person, в котором хранится имя, фамилия, дата рождения и любимый день недели (используйте
 классы из пакета
@@ -18,7 +19,55 @@ public class Person {
     }
     public String name;
     public String surname;
+    public int birthday;
+    public int myday;
 
+    public Person(String name, String surname, int birthday, int myday) {
+        this.name = name;
+        this.surname = surname;
+        this.birthday = birthday;
+        this.myday = myday;
+    }
 
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public int getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(int birthday) {
+        this.birthday = birthday;
+    }
+
+    public int getMyday() {
+        return myday;
+    }
+
+    public void setMyday(int myday) {
+        this.myday = myday;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", birthday=" + birthday +
+                ", myday=" + myday +
+                '}';
+    }
 }
