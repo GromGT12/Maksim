@@ -9,8 +9,9 @@ import java.time.LocalTime;
  */
 public class Application {
     public static void main(String[] args) {
-      
-
+        PersonParser parser = new PersonParser();
+        Person parsePerson = parser.parsePerson("Fedor, Petrov, 7, 1980-25-02");
+        System.out.println(parsePerson);
 
     }
 }

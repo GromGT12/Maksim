@@ -1,4 +1,5 @@
 package home_work_14.Task4;
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 /*
 Создайте класс Person, в котором хранится имя, фамилия, дата рождения и любимый день недели (используйте
@@ -14,15 +15,13 @@ java.time).
  */
 
 public class Person {
-    public static void main(String[] args) {
 
-    }
-    public String name;
-    public String surname;
-    public int birthday;
-    public int myday;
+    private final String name;
+    private final String surname;
+    private final LocalDate birthday;
+    private final DayOfWeek myday;
 
-    public Person(String name, String surname, int birthday, int myday) {
+    public Person(String name, String surname, LocalDate birthday, DayOfWeek myday) {
         this.name = name;
         this.surname = surname;
         this.birthday = birthday;
@@ -33,32 +32,16 @@ public class Person {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getSurname() {
         return surname;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public int getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(int birthday) {
-        this.birthday = birthday;
-    }
-
-    public int getMyday() {
+    public DayOfWeek getMyday() {
         return myday;
-    }
-
-    public void setMyday(int myday) {
-        this.myday = myday;
     }
 
     @Override
