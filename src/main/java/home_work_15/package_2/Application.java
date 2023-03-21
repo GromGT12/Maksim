@@ -6,6 +6,7 @@ public class Application {
     public static void main(String[] args) {
         String path = "src/main/java/home_work_15/package_1/example.txt";
 
+        // нигде не используется этот объект. нужен ли он нам вообще?
         File file = new File(path);
 
         String path3 = "src/main/java/home_work_15/package_1";
