@@ -4,9 +4,8 @@ import java.io.*;
 
 public class ReaderWriter {
     public static void main(String[] args) throws IOException {
-
-        String outputPath = "src/main/java/home_work_16/package_3/output.txt";
-        String inputPath = "src/main/java/home_work_16/package_3/The Show Must Go On_queen.txt";
+        String inputPath = "src/main/java/home_work_16/package_5/The Show Must Go On_queen.txt";
+        String outputPath = "src/main/java/home_work_16/package_5/output.txt";
 
         try (InputStream inputStream = new FileInputStream(inputPath);
              OutputStream outputStream = new FileOutputStream(outputPath)) {

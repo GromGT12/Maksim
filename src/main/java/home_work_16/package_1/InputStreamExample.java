@@ -6,12 +6,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-
 public class InputStreamExample {
-
     public static void main(String[] args) {
-
-        String path = "src/main/java/home_work_16/package_3/The Show Must Go On_queen.txt";
+        String path = "src/main/java/home_work_16/package_5/The Show Must Go On_queen.txt";
         File file = new File(path);
 
         try (InputStream inputStream = new FileInputStream(file)) {

@@ -15,7 +15,7 @@ import java.io.Serializable;
 public class Motorcycle implements Serializable {
     private String brand;
     private String model;
-    private int  engineVolume;
+    private int engineVolume;
     private transient String condition;
 
     public Motorcycle(String brand, String model, int engineVolume, String condition) {
@@ -26,7 +26,6 @@ public class Motorcycle implements Serializable {
     }
 
     public Motorcycle() {
-
     }
 
     public String getBrand() {

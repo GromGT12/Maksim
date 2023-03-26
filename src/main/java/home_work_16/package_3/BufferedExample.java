@@ -7,8 +7,7 @@ import java.io.InputStream;
 
 public class BufferedExample {
     public static void main(String[] args) throws IOException {
-
-        String inputPath = "src/main/java/home_work_16/package_3/The Show Must Go On_queen.txt";
+        String inputPath = "src/main/java/home_work_16/package_5/The Show Must Go On_queen.txt";
 
         try (InputStream inputStream = new FileInputStream(inputPath);
              BufferedInputStream bufferedInputStream = new BufferedInputStream(inputStream)) {
