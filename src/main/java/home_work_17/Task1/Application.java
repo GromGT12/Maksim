@@ -11,16 +11,15 @@ public class Application {
         motorcycle.setEngineVolume(1000);
         motorcycle.setCondition("Purchased of the Salon");
 
-        try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream("src/main/java/home_work_17/Task1/Honda.txt"))) {
+        try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream("src/main/java/home_work_17/Task1/Honda"))) {
             objectOutputStream.writeObject(motorcycle);
         } catch (IOException e) {
             e.printStackTrace();
 
         }
-        try (ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream("src/main/java/home_work_17/Task1/Honda.txt"))) {
-            Motorcycle o = (Motorcycle) objectInputStream.readObject();
-            System.out.println(o);
-
+        try (ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream("src/main/java/home_work_17/Task1/Honda"))) {
+            Motorcycle honda = (Motorcycle) objectInputStream.readObject();
+            System.out.println(honda);
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {

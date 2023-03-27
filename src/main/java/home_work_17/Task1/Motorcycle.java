@@ -1,14 +1,4 @@
 package home_work_17.Task1;
-/*
-Task 1
-Создайте класс Motorcycle, в котором должны быть поля brand, model, engineVolume
-(объем двигателя в см3),String condition.
-В классе application создайте объект типа Motocycle и сериализуйте его с
-        помощью java-сериализации. Поле
-condition сериализоваться не должно!
-Далее в этом же классе десериализуйте Motocycle из файла и выведите его в консоль
- */
-
 
 import java.io.Serializable;
 
@@ -18,14 +8,14 @@ public class Motorcycle implements Serializable {
     private int engineVolume;
     private transient String condition;
 
+    public Motorcycle() {
+    }
+
     public Motorcycle(String brand, String model, int engineVolume, String condition) {
         this.brand = brand;
         this.model = model;
         this.engineVolume = engineVolume;
         this.condition = condition;
-    }
-
-    public Motorcycle() {
     }
 
     public String getBrand() {
