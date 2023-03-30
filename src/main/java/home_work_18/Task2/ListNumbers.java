@@ -15,6 +15,7 @@ public class ListNumbers {
         for (int i = 0; i <= elements; i++) {
             list.add(0, i);
         }
+        // здесь наверное надо было сделать System.out.println(list)
         System.out.println(elements);
         Iterator<Integer> iterator = list.iterator();
         while (iterator.hasNext()) {
