@@ -7,14 +7,14 @@ public class FootballClub {
     private String country;
     private String city;
 
+    public String getClub() {
+        return club;
+    }
+
     public FootballClub(String club, String country, String city) {
         this.club = club;
         this.country = country;
         this.city = city;
-    }
-
-    public String getClub() {
-        return club;
     }
 
     public void setClub(String club) {
