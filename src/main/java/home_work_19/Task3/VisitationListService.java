@@ -29,23 +29,21 @@ public class VisitationListService {
         VisWebsite visitingWebsite7 = new VisWebsite("Jack", "Pinterest.com");
         VisWebsite visitingWebsite8 = new VisWebsite("Maks", "Facebook");
 
-        //наш список который передаем всем методам на вход
         List<VisWebsite> visWebsite = new ArrayList<>(List.of(visitingWebsite1, visitingWebsite2, visitingWebsite3, visitingWebsite4, visitingWebsite5, visitingWebsite6, visitingWebsite7, visitingWebsite8));
-        //метод 2.1
-        List<String> userNames = searchUniqueNames(visWebsite);
-        System.out.println("Пользователи сайтов" + userNames);
-        //метод 2.1
-        Set<String> sites = searchUniqueSites(visWebsite);
-        System.out.println("Сайты" + sites);
-        //метод 2.3
-        Set<String, Integer> visitCountForSites = countNumberVisits(visWebsite);
-        System.out.println("Количество посещений кажого сайта" + visitCountForSites);
+
+        Set<String> userNames = searchUniqueUser(visWebsite);
+        System.out.println("Пользователи сайтов :" + userNames);
+
+        Set<String> sites = searchUniqueSite(visWebsite);
+        System.out.println("Сайты :" + sites);
+
+        Map<String, Integer> visitCountForSites = countNumberVisits(visWebsite);
+        System.out.println("Количество посещений кажого сайта :" + visitCountForSites);
 
     }
-    //тут имплементируем методы
-    private static Set<String> countNumberVisits(List<VisWebsite> visWebsite) {
+    private static Map<String, Integer> countNumberVisits(List<VisWebsite> visWebsites) {
         Map<String, Integer> result = new HashMap<>();
-        for (VisWebsite visWebsite : visWebsite) {
+        for (VisWebsite visWebsite : visWebsites) {
             String siteName = visWebsite.getNameWebsite();
 
             if (result.containsKey(siteName)) {
@@ -56,26 +54,25 @@ public class VisitationListService {
                 result.put(siteName, 1);
             }
         }
-        return (Set<String>) result;
-
+        return result;
     }
-
-    private static Set<String> searchUniqueSites(List<VisWebsite> visWebsite) {
+    private static Set<String> searchUniqueUser(List<VisWebsite> visWebsites) {
         Set<String> sites = new HashSet<>();
-        for (VisWebsite visWebsite : visWebsite) {
+        for (VisWebsite visWebsite : visWebsites) {
             sites.add(visWebsite.getUser());
         }
         return sites;
     }
 
-    private static List<String> searchUniqueNames(List<VisWebsite> visWebsite) {
+    private static Set<String> searchUniqueSite(List<VisWebsite> visWebsites) {
         Set<String> result = new HashSet<>();
-        for (VisWebsite visWebsite : visWebsite) {
-            result.add(visWebsite.getUser());
+        for (VisWebsite visWebsite : visWebsites) {
+            result.add(visWebsite.getNameWebsite());
         }
         return result;
     }
 }
+
 
 
 

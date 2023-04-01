@@ -13,7 +13,6 @@ ProductReceipt цену одной единицы товара.
 
  */
 
-
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,21 +31,22 @@ public class ListProduct {
         ArrayList<ProductReceipt> productReceiptList = new ArrayList<>(List.of(productReceipt, productReceipt1, productReceipt2, productReceipt3, productReceipt4, productReceipt5));
         calculateCheck(productReceiptList);
     }
+
     private static void calculateCheck(ArrayList<ProductReceipt> productReceiptList) {
         Map<ProductReceipt, Integer> itemCount = new HashMap<>();
         for (ProductReceipt productReceipt : productReceiptList) {
-            if(itemCount.containsKey(productReceipt)) {
+            if (itemCount.containsKey(productReceipt)) {
                 Integer count = itemCount.get(productReceipt);
                 Integer updatedCount = count + 1;
                 itemCount.put(productReceipt, updatedCount);
-            }else{
+            } else {
                 itemCount.put(productReceipt, 1);
             }
         }
         BigDecimal sum = BigDecimal.ZERO;
         for (Map.Entry<ProductReceipt, Integer> entry : itemCount.entrySet()) {
             BigDecimal price = entry.getKey().getPrice();
-           sum = sum.add(price.multiply(BigDecimal.valueOf(entry.getValue())));
+            sum = sum.add(price.multiply(BigDecimal.valueOf(entry.getValue())));
         }
         System.out.println(itemCount);
         System.out.println(sum);
