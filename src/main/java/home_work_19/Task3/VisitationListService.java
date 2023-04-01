@@ -20,17 +20,17 @@ import java.util.*;
 public class VisitationListService {
     public static void main(String[] args) {
 
-        VisWebsite visWebsite = new VisWebsite("Maks", "Netflix.com");
-        VisWebsite visitingWebsite1 = new VisWebsite("Jack", "Pinterest.com");
-        VisWebsite visitingWebsite2 = new VisWebsite("Monica", "Lady-makeup.Pl");
-        VisWebsite visitingWebsite3 = new VisWebsite("Taras", "Ebay.com");
-        VisWebsite visitingWebsite4 = new VisWebsite("Adrian", "Otomoto.Pl");
-        VisWebsite visitingWebsite5 = new VisWebsite("Maks", "Netflix.com");
-        VisWebsite visitingWebsite6 = new VisWebsite("Jack", "Pinterest.com");
-        VisWebsite visitingWebsite7 = new VisWebsite("Maks", "Facebook");
+        VisWebsite visitingWebsite1 = new VisWebsite("Maks", "Netflix.com");
+        VisWebsite visitingWebsite2 = new VisWebsite("Jack", "Pinterest.com");
+        VisWebsite visitingWebsite3 = new VisWebsite("Monica", "Lady-makeup.Pl");
+        VisWebsite visitingWebsite4 = new VisWebsite("Taras", "Ebay.com");
+        VisWebsite visitingWebsite5 = new VisWebsite("Adrian", "Otomoto.Pl");
+        VisWebsite visitingWebsite6 = new VisWebsite("Maks", "Netflix.com");
+        VisWebsite visitingWebsite7 = new VisWebsite("Jack", "Pinterest.com");
+        VisWebsite visitingWebsite8 = new VisWebsite("Maks", "Facebook");
 
         //наш список который передаем всем методам на вход
-        List<VisWebsite> visWebsiteList = new ArrayList<>(List.of(visWebsite, visitingWebsite1, visitingWebsite2, visitingWebsite3, visitingWebsite4, visitingWebsite5, visitingWebsite6, visitingWebsite7));
+        List<VisWebsite> visWebsite = new ArrayList<>(List.of(visitingWebsite1, visitingWebsite2, visitingWebsite3, visitingWebsite4, visitingWebsite5, visitingWebsite6, visitingWebsite7, visitingWebsite8));
         //метод 2.1
         List<String> userNames = searchUniqueNames(visWebsite);
         System.out.println("Пользователи сайтов" + userNames);
@@ -42,8 +42,6 @@ public class VisitationListService {
         System.out.println("Количество посещений кажого сайта" + visitCountForSites);
 
     }
-
-
     //тут имплементируем методы
     private static Set<String> countNumberVisits(List<VisWebsite> visWebsite) {
         Map<String, Integer> result = new HashMap<>();
