@@ -15,15 +15,12 @@ Task 3
 хранится количество посещений
  */
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class VisitationListService {
     public static void main(String[] args) {
 
-        VisWebsite visitingWebsite = new VisWebsite("Maks", "Netflix.com");
+        VisWebsite visWebsite = new VisWebsite("Maks", "Netflix.com");
         VisWebsite visitingWebsite1 = new VisWebsite("Jack", "Pinterest.com");
         VisWebsite visitingWebsite2 = new VisWebsite("Monica", "Lady-makeup.Pl");
         VisWebsite visitingWebsite3 = new VisWebsite("Taras", "Ebay.com");
@@ -32,34 +29,57 @@ public class VisitationListService {
         VisWebsite visitingWebsite6 = new VisWebsite("Jack", "Pinterest.com");
         VisWebsite visitingWebsite7 = new VisWebsite("Maks", "Facebook");
 
+        //наш список который передаем всем методам на вход
+        List<VisWebsite> visWebsiteList = new ArrayList<>(List.of(visWebsite, visitingWebsite1, visitingWebsite2, visitingWebsite3, visitingWebsite4, visitingWebsite5, visitingWebsite6, visitingWebsite7));
+        //метод 2.1
+        List<String> userNames = searchUniqueNames(visWebsite);
+        System.out.println("Пользователи сайтов" + userNames);
+        //метод 2.1
+        Set<String> sites = searchUniqueSites(visWebsite);
+        System.out.println("Сайты" + sites);
+        //метод 2.3
+        Set<String, Integer> visitCountForSites = countNumberVisits(visWebsite);
+        System.out.println("Количество посещений кажого сайта" + visitCountForSites);
 
-        HashMap<String, String> Website = new HashMap<>();
-        Website.put(visitingWebsite.getUser(), visitingWebsite.getNameWebsite());
-        Website.put(visitingWebsite1.getUser(), visitingWebsite1.getNameWebsite());
-        Website.put(visitingWebsite2.getUser(), visitingWebsite2.getNameWebsite());
-        Website.put(visitingWebsite3.getUser(), visitingWebsite3.getNameWebsite());
-        Website.put(visitingWebsite4.getUser(), visitingWebsite4.getNameWebsite());
-        Website.put(visitingWebsite5.getUser(), visitingWebsite5.getNameWebsite());
-        Website.put(visitingWebsite6.getUser(), visitingWebsite6.getNameWebsite());
-        Website.put(visitingWebsite7.getUser(), visitingWebsite7.getNameWebsite());
+    }
 
 
-        Set<String> keys = Website.keySet();
-        System.out.println("Уникальные имена " + keys);
+    //тут имплементируем методы
+    private static Set<String> countNumberVisits(List<VisWebsite> visWebsite) {
+        Map<String, Integer> result = new HashMap<>();
+        for (VisWebsite visWebsite : visWebsite) {
+            String siteName = visWebsite.getNameWebsite();
 
-        ArrayList<String> values = new ArrayList<>(Website.values());
-        System.out.println("Уникальные сайты " + values);
-        System.out.println();
+            if (result.containsKey(siteName)) {
+                Integer visitCount = result.get(siteName);
+                Integer updateCount = visitCount + 1;
+                result.put(siteName, updateCount);
+            } else {
+                result.put(siteName, 1);
+            }
+        }
+        return (Set<String>) result;
 
-        Map<VisWebsite, Integer> visitUser = new HashMap<>();
-        visitUser.put(visitingWebsite, 2);
-        visitUser.put(visitingWebsite2, 3);
-        visitUser.put(visitingWebsite3, 5);
-        visitUser.put(visitingWebsite4, 6);
-        visitUser.put(visitingWebsite5, 10);
-        visitUser.put(visitingWebsite6, 8);
-        visitUser.put(visitingWebsite7, 4);
+    }
 
-        System.out.println(visitUser);
+    private static Set<String> searchUniqueSites(List<VisWebsite> visWebsite) {
+        Set<String> sites = new HashSet<>();
+        for (VisWebsite visWebsite : visWebsite) {
+            sites.add(visWebsite.getUser());
+        }
+        return sites;
+    }
+
+    private static List<String> searchUniqueNames(List<VisWebsite> visWebsite) {
+        Set<String> result = new HashSet<>();
+        for (VisWebsite visWebsite : visWebsite) {
+            result.add(visWebsite.getUser());
+        }
+        return result;
     }
 }
+
+
+
+
+
