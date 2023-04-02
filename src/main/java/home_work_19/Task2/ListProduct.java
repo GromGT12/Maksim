@@ -4,7 +4,7 @@ package home_work_19.Task2;
 /*
 Task 2
 Создайте класс для описания товара в чеке. В классе храните int id (артикул), название товара и
-ProductReceipt цену одной единицы товара.
+Product цену одной единицы товара.
 В классе Application создайте список товаров (как в корзине в магазине), добавьте в него товары,
 причем некоторые товары добавьте
 по несколько раз.
@@ -21,20 +21,20 @@ import java.util.Map;
 
 public class ListProduct {
     public static void main(String[] args) {
-        ProductReceipt productReceipt = new ProductReceipt(1455, "Cosmetics", 10);
-        ProductReceipt productReceipt1 = new ProductReceipt(2230, "Vegetables", 3);
-        ProductReceipt productReceipt2 = new ProductReceipt(1150, "Сar parts", 40);
-        ProductReceipt productReceipt3 = new ProductReceipt(4580, "Household chemicals", 13);
-        ProductReceipt productReceipt4 = new ProductReceipt(2230, "Vegetables", 3);
-        ProductReceipt productReceipt5 = new ProductReceipt(1455, "Cosmetics", 10);
+        Product productReceipt = new Product(1455, "Cosmetics", 10);
+        Product productReceipt1 = new Product(2230, "Vegetables", 3);
+        Product productReceipt2 = new Product(1150, "Сar parts", 40);
+        Product productReceipt3 = new Product(4580, "Household chemicals", 13);
+        Product productReceipt4 = new Product(2230, "Vegetables", 3);
+        Product productReceipt5 = new Product(1455, "Cosmetics", 10);
 
-        ArrayList<ProductReceipt> productReceiptList = new ArrayList<>(List.of(productReceipt, productReceipt1, productReceipt2, productReceipt3, productReceipt4, productReceipt5));
+        ArrayList<Product> productReceiptList = new ArrayList<>(List.of(productReceipt, productReceipt1, productReceipt2, productReceipt3, productReceipt4, productReceipt5));
         calculateCheck(productReceiptList);
     }
 
-    private static void calculateCheck(ArrayList<ProductReceipt> productReceiptList) {
-        Map<ProductReceipt, Integer> itemCount = new HashMap<>();
-        for (ProductReceipt productReceipt : productReceiptList) {
+    private static void calculateCheck(ArrayList<Product> productReceiptList) {
+        Map<Product, Integer> itemCount = new HashMap<>();
+        for (Product productReceipt : productReceiptList) {
             if (itemCount.containsKey(productReceipt)) {
                 Integer count = itemCount.get(productReceipt);
                 Integer updatedCount = count + 1;
@@ -44,7 +44,7 @@ public class ListProduct {
             }
         }
         BigDecimal sum = BigDecimal.ZERO;
-        for (Map.Entry<ProductReceipt, Integer> entry : itemCount.entrySet()) {
+        for (Map.Entry<Product, Integer> entry : itemCount.entrySet()) {
             BigDecimal price = entry.getKey().getPrice();
             sum = sum.add(price.multiply(BigDecimal.valueOf(entry.getValue())));
         }

@@ -5,12 +5,12 @@ import java.math.BigDecimal;
 import java.util.Objects;
 
 // переименуй плиз просто в Product
-public class ProductReceipt {
+public class Product {
     private int id;
     private String productTitle;
     private BigDecimal price;
 
-    public ProductReceipt(int id, String productTitle, int price) {
+    public Product(int id, String productTitle, int price) {
         this.id = id;
         this.productTitle = productTitle;
         this.price = BigDecimal.valueOf(price);
@@ -44,7 +44,7 @@ public class ProductReceipt {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ProductReceipt that = (ProductReceipt) o;
+        Product that = (Product) o;
         return id == that.id && Objects.equals(productTitle, that.productTitle) && Objects.equals(price, that.price);
     }
 
@@ -55,7 +55,7 @@ public class ProductReceipt {
 
     @Override
     public String toString() {
-        return "ProductReceipt{" +
+        return "Product{" +
                 "id=" + id +
                 ", productTitle='" + productTitle + '\'' +
                 ", price=" + price +

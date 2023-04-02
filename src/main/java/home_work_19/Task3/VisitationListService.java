@@ -41,6 +41,7 @@ public class VisitationListService {
         System.out.println("Количество посещений кажого сайта :" + visitCountForSites);
 
     }
+
     private static Map<String, Integer> countNumberVisits(List<VisWebsite> visWebsites) {
         Map<String, Integer> result = new HashMap<>();
         for (VisWebsite visWebsite : visWebsites) {
@@ -56,6 +57,7 @@ public class VisitationListService {
         }
         return result;
     }
+
     private static Set<String> searchUniqueUser(List<VisWebsite> visWebsites) {
         Set<String> sites = new HashSet<>();
         for (VisWebsite visWebsite : visWebsites) {
