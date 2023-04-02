@@ -4,6 +4,7 @@ package home_work_19.Task2;
 import java.math.BigDecimal;
 import java.util.Objects;
 
+// переименуй плиз просто в Product
 public class ProductReceipt {
     private int id;
     private String productTitle;
