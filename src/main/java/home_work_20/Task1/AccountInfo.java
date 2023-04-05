@@ -1,4 +1,4 @@
-package home_work_20;
+package home_work_20.Task1;
 
 
 import java.time.LocalDate;
@@ -84,11 +84,11 @@ public class AccountInfo implements Comparable<AccountInfo>{
         if(result !=0){
             return result;
         }
-        result = String.CASE_INSENSITIVE_ORDER.compare(this.email, accountInfo.getEmail());
+        result = (this.email.compareTo(accountInfo.getEmail()));
         if(result !=0){
             return result;
         }
-        return this.dateOfBirth.compareTo(this.dateOfBirth);
+        return this.dateOfBirth.compareTo(accountInfo.getDateOfBirth());
     }
 
 }
