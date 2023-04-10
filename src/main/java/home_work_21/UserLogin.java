@@ -1,6 +1,5 @@
 package home_work_21;
 
-import java.sql.SQLOutput;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -40,8 +39,12 @@ public class UserLogin {
                 if (password.equals(passwordFromDB)) {
                     System.out.println("Hello, " + username);
                 } else {
+                    // Я хотел бы видеть здесь несколько другую реализацию. Нужно какое-то хранилище,
+                    // в котором будет храниться количество неудачных попыток
                     System.out.println("Вы ввели неправильный пароль - у вас осталось 3 попытоки " + username);
                     String newPassword = scanner.nextLine();
+                    // эта проверка проверяет, содержит ли строка пароля в себе имя пользователя
+                    // например для юзера pavel и пароля pavel1990 она выдаст true
                     newPassword.contains(username);
                     System.out.println("Осталось 2 попытки " + username);
                     String newPassword1 = scanner.nextLine();
@@ -52,26 +55,27 @@ public class UserLogin {
                     System.out.println("Внимание Вы заблоктрованы");
                     String userName = scanner.nextLine();
                     userName.contains(userName);
-                        System.out.println("Password incorrect! User blocked!");
-                        if(username.contains(username)){
-                        }
+                    System.out.println("Password incorrect! User blocked!");
+                    // вижу пустой if - что в нем хотели разместить
+                    if (username.contains(username)) {
                     }
-                } else{
-                    System.out.println("Not found: " + username);
-                    System.out.println("If you want to register, enter your name. If you want to skip - enter 'skip'");
-                    String newName = scanner.nextLine();
-                    if (!newName.equalsIgnoreCase(SKIP)) {
-                        System.out.println("Enter your new password");
-                        String newPassword = scanner.nextLine();
-                        namesWithPasswords.put(newName, newPassword);
-                        System.out.println("Hello, " + newName + " you are registered!");
-                    } else {
+                }
+            } else {
+                System.out.println("Not found: " + username);
+                System.out.println("If you want to register, enter your name. If you want to skip - enter 'skip'");
+                String newName = scanner.nextLine();
+                if (!newName.equalsIgnoreCase(SKIP)) {
+                    System.out.println("Enter your new password");
+                    String newPassword = scanner.nextLine();
+                    namesWithPasswords.put(newName, newPassword);
+                    System.out.println("Hello, " + newName + " you are registered!");
+                } else {
 
-                    }
                 }
             }
         }
     }
+}
 
 
 
