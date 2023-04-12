@@ -4,13 +4,13 @@ package home_work_19.Task2;
 import java.math.BigDecimal;
 import java.util.Objects;
 
-// переименуй плиз просто в Product
-public class Product {
+// переименуй плиз просто в ProductInterface
+public class ProductInterface {
     private int id;
     private String productTitle;
     private BigDecimal price;
 
-    public Product(int id, String productTitle, int price) {
+    public ProductInterface(int id, String productTitle, int price) {
         this.id = id;
         this.productTitle = productTitle;
         this.price = BigDecimal.valueOf(price);
@@ -44,7 +44,7 @@ public class Product {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Product that = (Product) o;
+        ProductInterface that = (ProductInterface) o;
         return id == that.id && Objects.equals(productTitle, that.productTitle) && Objects.equals(price, that.price);
     }
 
@@ -55,7 +55,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
+        return "ProductInterface{" +
                 "id=" + id +
                 ", productTitle='" + productTitle + '\'' +
                 ", price=" + price +
