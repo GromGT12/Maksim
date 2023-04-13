@@ -33,7 +33,7 @@ public class UserLogin {
                 break;
             }
             if (blackListService.isBanned(username)) {
-                System.out.println("Этот пользователь уже забанен" + username);
+                System.out.println("Этот пользователь уже забанен " + username);
                 continue;
             }
             if (namesWithPasswords.containsKey(username)) {
