@@ -54,6 +54,12 @@ public class UserLogin {
                 System.out.println("Not found: " + username);
                 System.out.println("If you want to register, enter your name. If you want to skip - enter 'skip'");
                 String newName = scanner.nextLine();
+                // по коду вижу, что вы не протестировали этот кейс
+                // правильно было бы, чтобы если я введу для регистрации имя Pavel, система сказала мне, что пользователь с таким именем уже есть в системе и предложила ввести другое имя
+                /*if (userSystem.contains(newName)) {
+                    System.out.println("юзер с таким именем уже есть: " + newName);
+                    continue;
+                }*/
                 if (userSystem.equals(username)) {
                     userSystem.add(username);
                 } else {
