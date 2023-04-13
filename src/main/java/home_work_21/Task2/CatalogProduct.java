@@ -5,10 +5,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+// В целом - все хорошо!
 public class CatalogProduct {
     public static void main(String[] args) {
 
+        // здесь создается переменная product, которая потом нигде не используется. проверь, нужна ли она
         Product product = new Product();
+        // mapProduct - на мой взгляд, можно сделать название немного более говорящим. productById например (продукт по id)
         Map<Integer, Product> mapProduct = new HashMap<>();
         mapProduct.put(1122, (new Product(1122, "MacBook Air m1 13,3 512GB", "notebook")));
         mapProduct.put(1123, (new Product(1123, "MacBook Pro m2 16 1TB", "notebook")));
@@ -33,6 +36,7 @@ public class CatalogProduct {
             if (mapProduct.containsKey(id)) {
                 System.out.println(mapProduct.get(id));
             } else {
+                // использовали форматированный вывод - отлично
                 System.out.printf("2: В нашем магазине нет товара с id - %d", id);
                 System.out.println();
             }
