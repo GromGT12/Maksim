@@ -36,6 +36,7 @@ public class UserLogin {
                 System.out.println("Этот пользователь уже забанен " + username);
                 continue;
             }
+            String newName = null;
             if (namesWithPasswords.containsKey(username)) {
                 System.out.println("Please enter your password..");
                 String password = scanner.nextLine();
@@ -53,32 +54,33 @@ public class UserLogin {
             } else {
                 System.out.println("Not found: " + username);
                 System.out.println("If you want to register, enter your name. If you want to skip - enter 'skip'");
-                String newName = scanner.nextLine();
+                newName = scanner.nextLine();
                 // по коду вижу, что вы не протестировали этот кейс
                 // правильно было бы, чтобы если я введу для регистрации имя Pavel, система сказала мне, что пользователь с таким именем уже есть в системе и предложила ввести другое имя
-                /*if (userSystem.contains(newName)) {
-                    System.out.println("юзер с таким именем уже есть: " + newName);
-                    continue;
-                }*/
-                if (userSystem.equals(username)) {
-                    userSystem.add(username);
-                } else {
-                    System.out.println("Такого юзреа нет");
-                    continue;
+                // if (userSystem.contains(newName)) {
+                //  System.out.println("юзер с таким именем уже есть: " + newName);
+                continue;
+            }
 
-                }
-                if (!newName.equalsIgnoreCase(SKIP)) {
-                    System.out.println("Enter your new password");
-                    String newPassword = scanner.nextLine();
-                    namesWithPasswords.put(newName, newPassword);
-                    System.out.println("Hello, " + newName + " you are registered!");
-                } else {
+            if (userSystem.equals(username)) {
+                userSystem.add(username);
+            } else {
+                System.out.println("Такого юзреа нет");
+                continue;
 
-                }
+            }
+            if (!newName.equalsIgnoreCase(SKIP)) {
+                System.out.println("Enter your new password");
+                String newPassword = scanner.nextLine();
+                namesWithPasswords.put(newName, newPassword);
+                System.out.println("Hello, " + newName + " you are registered!");
+            } else {
+
             }
         }
     }
 }
+
 
 
 
