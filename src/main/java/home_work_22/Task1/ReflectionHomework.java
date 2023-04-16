@@ -5,14 +5,14 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
-
+// Все получилось, по сути задача сделана!
 public class ReflectionHomework {
     public static void main(String[] args) throws InvocationTargetException, InstantiationException, IllegalAccessException {
         PersonalInfo personalInfo = new PersonalInfo("Ivan", "Petrov", 53, true);
         Class<? extends PersonalInfo> clazz = personalInfo.getClass();
         Constructor<?>[] declaredConstructors = clazz.getDeclaredConstructors();
 
-        PersonalInfo reflectionPersonalInfo = null;
+        PersonalInfo reflectionPersonalInfo;
         for (Constructor<?> decraredConstructor : declaredConstructors) {
             if (decraredConstructor.getParameterCount() == 0) {
                 reflectionPersonalInfo = (PersonalInfo) decraredConstructor.newInstance();
@@ -27,7 +27,6 @@ public class ReflectionHomework {
                         declaredField.set(reflectionPersonalInfo, "Dima");
                     }
                     if (declaredField.getName().equals("surname")) {
-                        ;
                         declaredField.set(reflectionPersonalInfo, "Hladyshev");
                     }
                     if (declaredField.getName().equals("age")) {

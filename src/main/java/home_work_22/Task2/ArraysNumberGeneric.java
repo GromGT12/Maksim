@@ -1,5 +1,6 @@
 package home_work_22.Task2;
 
+// Этот класс не нужен
 public class ArraysNumberGeneric<T> {
 
     ArraysNumberGeneric(T value) {
