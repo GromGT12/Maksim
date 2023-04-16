@@ -2,14 +2,12 @@ package home_work_22.Task3;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
-/**
- * @author Pavel Radkevich
- * @since 13.04.23
- */
 public class GroupingHomework {
-
     public static void main(String[] args) {
         AutoInfo autoInfo1 = new AutoInfo("VW", "Polo", 3, 1.0f);
         AutoInfo autoInfo2 = new AutoInfo("VW", "Passat", 4, 1.6f);
@@ -21,8 +19,37 @@ public class GroupingHomework {
 
         List<AutoInfo> autoInfos = new ArrayList<>(List.of(autoInfo1, autoInfo2, autoInfo3, autoInfo4, autoInfo5, autoInfo6, autoInfo7));
 
-        // напишите метод, который примет на вход autoInfos и сгруппирует авто по марке. он должен возвращать Map<String, List<AutoInfo>>
-
-        // напишите метод, который примет на вход autoInfos и сгруппирует объемы моторов по количеству цилиндров. он должен возвращать Map<Integer, List<Float>>
+        Map<String, List<AutoInfo>> autoByBrand = autoInfos.stream().collect(Collectors.groupingBy(AutoInfo::getBrand));
+        for (Map.Entry<String, List<AutoInfo>> stringListEntry : autoByBrand.entrySet()) {
+            System.out.println(stringListEntry.getKey());
+            for (AutoInfo autoInfo : stringListEntry.getValue()) {
+                System.out.println(autoInfo.getModel());
+            }
+        }
+        System.out.println();
+        Map<Integer, List<Float>> volumesByCylinders = groupVolumesByCylinders(autoInfos);
+        System.out.println(volumesByCylinders);
     }
+
+    private static Map<Integer, List<Float>> groupVolumesByCylinders(List<AutoInfo> autoInfos) {
+        Map<Integer, List<Float>> result = new HashMap<>();
+
+        for (AutoInfo autoInfo : autoInfos) {
+            int cylinderCount = autoInfo.getCylinderCount();
+            if (result.containsKey(cylinderCount)) {
+                result.get(cylinderCount).add(autoInfo.getEngineVolume());
+            } else {
+                List<Float> volumes = new ArrayList<>();
+                volumes.add(autoInfo.getEngineVolume());
+                result.put(cylinderCount, volumes);
+            }
+        }
+        return result;
+    }
+
 }
+
+
+
+
+

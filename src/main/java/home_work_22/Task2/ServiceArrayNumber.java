@@ -12,13 +12,6 @@ public class ServiceArrayNumber {
         NumberStorage<Integer> integerNumberStorage = new NumberStorage<>(integers);
         NumberStorage<Long> longNumberStorage = new NumberStorage<>(longs);
         NumberStorage<Double> doubleNumberStorage = new NumberStorage<>(doubles);
-
-
-        // строки 18-20 не нужны
-        ArraysNumberGeneric<Integer> integerArraysNumberGeneric = ArraysNumberGeneric.newInstance(123);
-        ArraysNumberGeneric<Double> doubleArraysNumberGeneric = ArraysNumberGeneric.newInstance(90.4);
-        ArraysNumberGeneric<Long> longArraysNumberGeneric = ArraysNumberGeneric.newInstance(10000000L);
-
     }
 }
 

@@ -3,7 +3,6 @@ package home_work_22.Task1;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
-import java.util.List;
 
 // Все получилось, по сути задача сделана!
 public class ReflectionHomework {
