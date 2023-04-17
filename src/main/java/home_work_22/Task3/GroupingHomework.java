@@ -19,6 +19,7 @@ public class GroupingHomework {
 
         List<AutoInfo> autoInfos = new ArrayList<>(List.of(autoInfo1, autoInfo2, autoInfo3, autoInfo4, autoInfo5, autoInfo6, autoInfo7));
 
+        // красивое решение, но я хотел бы на данном этапе решение через цикл. про Stream API будем говорить на ближйших занятиях
         Map<String, List<AutoInfo>> autoByBrand = autoInfos.stream().collect(Collectors.groupingBy(AutoInfo::getBrand));
         for (Map.Entry<String, List<AutoInfo>> stringListEntry : autoByBrand.entrySet()) {
             System.out.println(stringListEntry.getKey());

@@ -25,6 +25,7 @@ public class UniqueHomeWork {
     }
 
     private static Set<String> findUniqueModel(List<AutoInfo> autoInfos) {
+        // коллекции принято называть во множественном числе, исправлять сейчас не нужно, но в следующий раз пиши плиз autoModels
         Set<String> autoModel = new TreeSet<>();
         for (AutoInfo autoInfo : autoInfos) {
             autoModel.add(autoInfo.getModel());
@@ -33,7 +34,7 @@ public class UniqueHomeWork {
     }
 
     private static Set<String> findUniqueBrand(List<AutoInfo> autoInfos) {
-
+        // autoBrands
         Set<String> autoBrand = new TreeSet<>();
         for (AutoInfo autoInfo : autoInfos) {
             autoBrand.add(autoInfo.getBrand());
