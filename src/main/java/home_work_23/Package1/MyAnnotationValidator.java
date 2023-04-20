@@ -43,6 +43,7 @@ public class MyAnnotationValidator {
                 if (annotation.annotationType().equals(OnlyDigits.class)) {
                     try {
                         String value = (String) declaredField.get(obj);
+                        // здесь нужно добавить знак отрицания if (!ONLY_DIGITS_VALIDATION.matcher(value).matches())
                         if (ONLY_DIGITS_VALIDATION.matcher(value).matches()) {
                             String message = String.format("Field %s with value %s can contain only digits", declaredField.getName(), value);
 

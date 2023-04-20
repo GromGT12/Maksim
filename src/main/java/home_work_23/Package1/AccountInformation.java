@@ -53,4 +53,14 @@ public class AccountInformation {
     public void setPhoneNumber(int phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+
+    @Override
+    public String toString() {
+        return "AccountInformation{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber=" + phoneNumber +
+                '}';
+    }
 }
