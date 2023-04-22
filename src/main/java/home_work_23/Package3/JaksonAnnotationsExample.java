@@ -11,7 +11,7 @@ public class JaksonAnnotationsExample {
     public static void main(String[] args) {
         ObjectMapper mapper = new ObjectMapper();
 
-        AccountInformation accountInformation = new AccountInformation("Andrey", "Petrov", "Petrov@.com", 567876233);
+        AccountInformation accountInformation = new AccountInformation("Andrey", "Petrov", "Petrov@mail.com", "567876233");
 
         try (BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("src/main/java/home_work_23/Package3/AccountInformation.json"))) {
             byte[] bytes = mapper.writeValueAsBytes(accountInformation);

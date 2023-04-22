@@ -4,18 +4,21 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import home_work_23.Package2.OnlyDigits;
 
 public class AccountInformation {
+
+    @LettersOnly
     private String name;
+
     private String surname;
     @Email
     private String email;
-    @OnlyDigits
     @JsonIgnore
-    private int phoneNumber;
+    @OnlyDigits
+    private String phoneNumber;
 
     public AccountInformation() {
     }
 
-    public AccountInformation(String name, String surname, String email, int phoneNumber) {
+    public AccountInformation(String name, String surname, String email, String phoneNumber) {
         this.name = name;
         this.surname = surname;
         this.email = email;
@@ -46,11 +49,11 @@ public class AccountInformation {
         this.email = email;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -60,7 +63,8 @@ public class AccountInformation {
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", email='" + email + '\'' +
-                ", phoneNumber=" + phoneNumber +
+                ", phoneNumber='" + phoneNumber + '\'' +
                 '}';
     }
 }
+

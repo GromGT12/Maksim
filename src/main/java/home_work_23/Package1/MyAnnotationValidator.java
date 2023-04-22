@@ -16,43 +16,54 @@ public class MyAnnotationValidator {
             declaredField.setAccessible(true);
 
             for (Annotation annotation : declaredField.getAnnotations()) {
-                if (annotation.annotationType().equals(LettersOnly.class)) {
-                    try {
-                        String value = (String) declaredField.get(obj);
-                        if (ONLY_NAME_VALIDATION.matcher(value).matches()) {
-                            String message = String.format("Field %s with value %s can contain only letters", declaredField.getName(), value);
+                validateLattersOnly(obj, declaredField, annotation);
+                validateEmail(obj, declaredField, annotation);
+                validateOnlyDigits(obj, declaredField, annotation);
+            }
+        }
+    }
 
-                            throw new PingwitValidationException(message);
-                        }
-                    } catch (IllegalAccessException e) {
-                        throw new RuntimeException(e);
-                    }
-                }
-                if (annotation.annotationType().equals(Email.class)) {
-                    try {
-                        String value = (String) declaredField.get(obj);
-                        if (!ONLY_EMAIL_VALIDATION.matcher(value).matches()) {
-                            String message = String.format("Field %s with value %s can contain @email ", declaredField.getName(), value);
+    private static void validateOnlyDigits(Object obj, Field declaredField, Annotation annotation) {
+        if (annotation.annotationType().equals(OnlyDigits.class)) {
+            try {
+                String value = (String) declaredField.get(obj);
+                if (!ONLY_DIGITS_VALIDATION.matcher(value).matches()) {
+                    String message = String.format("Field %s with value %s can contain only digits", declaredField.getName(), value);
 
-                            throw new PingwitValidationException(message);
-                        }
-                    } catch (IllegalAccessException e) {
-                        throw new RuntimeException(e);
-                    }
+                    throw new PingwitValidationException(message);
                 }
-                if (annotation.annotationType().equals(OnlyDigits.class)) {
-                    try {
-                        String value = (String) declaredField.get(obj);
-                        // здесь нужно добавить знак отрицания if (!ONLY_DIGITS_VALIDATION.matcher(value).matches())
-                        if (ONLY_DIGITS_VALIDATION.matcher(value).matches()) {
-                            String message = String.format("Field %s with value %s can contain only digits", declaredField.getName(), value);
+            } catch (IllegalAccessException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
 
-                            throw new PingwitValidationException(message);
-                        }
-                    } catch (IllegalAccessException e) {
-                        throw new RuntimeException(e);
-                    }
+    private static void validateEmail(Object obj, Field declaredField, Annotation annotation) {
+        if (annotation.annotationType().equals(Email.class)) {
+            try {
+                String value = (String) declaredField.get(obj);
+                if (ONLY_EMAIL_VALIDATION.matcher(value).matches()) {
+                    String message = String.format("Field %s with value %s can contain @mail.com ", declaredField.getName(), value);
+
+                    throw new PingwitValidationException(message);
                 }
+            } catch (IllegalAccessException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
+    private static void validateLattersOnly(Object obj, Field declaredField, Annotation annotation) {
+        if (annotation.annotationType().equals(LettersOnly.class)) {
+            try {
+                String value = (String) declaredField.get(obj);
+                if (!ONLY_NAME_VALIDATION.matcher(value).matches()) {
+                    String message = String.format("Field %s with value %s can contain only letters", declaredField.getName(), value);
+
+                    throw new PingwitValidationException(message);
+                }
+            } catch (IllegalAccessException e) {
+                throw new RuntimeException(e);
             }
         }
     }
