@@ -5,7 +5,5 @@ public enum Medals {
     SILVER,
     BRONZE;
 
-    public Medals ordinal(int i) {
-        return ordinal(2);
     }
-}
+
