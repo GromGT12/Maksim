@@ -1,8 +1,6 @@
 package home_work_25.Task6;
 
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class ComparatorCar {
@@ -16,7 +14,7 @@ public class ComparatorCar {
         List<String> car = Arrays.asList("F430", "Enzo", "250 GTO", "550 Maranello");
 
         car.sort((o1, o2) -> {
-           int firstCharComparison = o1.charAt(0) - o2.charAt(0);
+            int firstCharComparison = o1.charAt(0) - o2.charAt(0);
             int secondCharComparison = -String.CASE_INSENSITIVE_ORDER.compare(o1.substring(1), o2.substring(1));
             return firstCharComparison != 0 ? firstCharComparison : secondCharComparison;
         });
