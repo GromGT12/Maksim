@@ -15,10 +15,6 @@ public class Sportsman {
         this.speed = speed;
     }
 
-    public Sportsman(String maks, int i, Medals gold) {
-
-    }
-
     public String getName() {
         return name;
     }

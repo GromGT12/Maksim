@@ -15,16 +15,6 @@ public class CarSorting {
         carList.add(new Car("Ferrari", "GTO 256", 1962));
         carList.add(new Car("Ferrari", "550 Marranello", 1996));
 
-
-        for (Car car : carList) {
-            System.out.println(car);
-
-            
-
-
-        }
-
-        /*
         Collections.sort(carList, new Comparator<Car>() {
             @Override
             public int compare(Car o1, Car o2) {
@@ -33,8 +23,7 @@ public class CarSorting {
         });
         Collections.sort(carList, (o1, o2)->(o2.getModel().compareTo(o1.getModel())));
         System.out.println("Сортировка в обратном порядке" + carList);
-        .
-         */
+
     }
 
 }
