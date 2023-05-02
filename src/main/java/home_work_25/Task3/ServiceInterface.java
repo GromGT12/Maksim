@@ -7,6 +7,3 @@ public class ServiceInterface {
         System.out.println(user);
     }
 }
-interface UserName {
-    User create(String name);
-}
