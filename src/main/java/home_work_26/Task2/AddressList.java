@@ -6,18 +6,18 @@ import java.util.stream.Collectors;
 public class AddressList {
     public static void main(String[] args) {
         List<Address> address = List.of(
-                new Address("Kyiv", "Андреевский спуск", 25, 11),
-                new Address("Kyiv", "Улица Антоновича", 12, 3),
-                new Address("Kyiv", "Андреевский спуск", 25, 11),
-                new Address("Charkov", "Андреевский спуск", 25, 11),
-                new Address("Charkov", "Полта́вский Шлях", 13, 9),
-                new Address("Charkov", "Полта́вский Шлях", 13, 9),
-                new Address("Lvov", "Андреевский спуск", 25, 11),
-                new Address("Lvov", "Улица Богдана Хмельницкого", 3, 8),
-                new Address("Lvov", "Улица Богдана Хмельницкого", 3, 8));
+                new Address("Kiev", "Andriyivsky Descent", 25, 11),
+                new Address("Kiev", "Antonovich Street", 12, 3),
+                new Address("Kiev", "Andriyivsky Descent", 25, 11),
+                new Address("Charkov", "Andriyivsky Descent", 25, 11),
+                new Address("Charkov", "Poltavskyi Shlyakh", 13, 9),
+                new Address("Charkov", "Poltavskyi Shlyakh", 13, 9),
+                new Address("Lvov", "Andriyivsky Descent", 25, 11),
+                new Address("Lvov", "Bogdan Khmelnitsky", 3, 8),
+                new Address("Lvov", "Bogdan Khmelnitsky", 3, 8));
 
         List<Address> city = address.stream()
-                .filter(cityList -> cityList.getCity().equals("Kyiv"))
+                .filter(cityList -> cityList.getCity().equals("Kiev"))
                 .collect(Collectors.toList());
         System.out.println(city);
     }

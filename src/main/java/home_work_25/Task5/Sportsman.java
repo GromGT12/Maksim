@@ -1,13 +1,15 @@
 
 package home_work_25.Task5;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Sportsman {
     private String name;
     private int speed;
+    private List<Medals> medalsList;
 
-    public Sportsman() {
+    public Sportsman(String maks, int i, Medals gold, Medals bronze, Medals silver) {
     }
 
     public Sportsman(String name, int speed) {

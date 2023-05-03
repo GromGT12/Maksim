@@ -3,7 +3,6 @@ package home_work_26.Task2;
 
 import java.util.Objects;
 
-
 public class Address {
 
     private final String city;
