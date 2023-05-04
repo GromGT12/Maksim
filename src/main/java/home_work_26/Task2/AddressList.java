@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 
 public class AddressList {
     public static void main(String[] args) {
+        // предложу переименовать переменную в addresses
         List<Address> address = List.of(
                 new Address("Kiev", "Andriyivsky Descent", 25, 11),
                 new Address("Kiev", "Antonovich Street", 12, 3),
@@ -17,6 +18,7 @@ public class AddressList {
                 new Address("Lvov", "Bogdan Khmelnitsky", 3, 8));
 
         List<Address> city = address.stream()
+                // предложу переименовать переменную в address
                 .filter(cityList -> cityList.getCity().equals("Kiev"))
                 .collect(Collectors.toList());
         System.out.println(city);

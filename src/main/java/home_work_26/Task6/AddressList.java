@@ -10,6 +10,7 @@ import static java.util.stream.Collectors.toSet;
 
 public class AddressList {
     public static void main(String[] args) {
+        // предложу переименовать в adresses
         List<Address> address = List.of(
                 new Address("Kiev", "Andriyivsky Descent", 25, 11),
                 new Address("Kiev", "Antonovich Street", 12, 3),
@@ -22,7 +23,9 @@ public class AddressList {
                 new Address("Lvov", "Bogdan Khmelnitsky", 3, 8));
 
         Set<CityStreet> addressSet = address.stream()
+                // предложу переименовать переменную в address
                 .map(address1 -> new CityStreet(address1.getCity(), "улица: " + address1.getStreet()))
+                // предложу переименовать переменную в addressShort
                 .filter(addressed -> "Kiev".equals(addressed.getCity())).collect(toSet());
         System.out.println(addressSet);
 
