@@ -3,14 +3,14 @@ package home_work_26.Task2;
 
 import java.util.Objects;
 
-public class Address {
+public class Addresses {
 
     private final String city;
     private final String street;
     private final int houseNumber;
     private final int flatNumber;
 
-    public Address(String city, String street, int houseNumber, int flatNumber) {
+    public Addresses(String city, String street, int houseNumber, int flatNumber) {
         this.city = city;
         this.street = street;
         this.houseNumber = houseNumber;
@@ -37,7 +37,7 @@ public class Address {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Address address = (Address) o;
+        Addresses address = (Addresses) o;
         return houseNumber == address.houseNumber && flatNumber == address.flatNumber && Objects.equals(city, address.city) && Objects.equals(street, address.street);
     }
 
@@ -48,7 +48,7 @@ public class Address {
 
     @Override
     public String toString() {
-        return "Address{" +
+        return "Addresses{" +
                 "city='" + city + '\'' +
                 ", street='" + street + '\'' +
                 ", houseNumber=" + houseNumber +
