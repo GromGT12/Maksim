@@ -26,7 +26,8 @@ public class AddressList {
 
         Set<CityStreet> addressSet = address.stream()
                 .map(address1 -> new CityStreet(address1.getCity(), address1.getStreet()))
-                .filter(addressed -> "Warsaw".equals(addressed.getCity())).collect(toSet());
+                .filter(addressed -> "Warsaw".equals(addressed.getCity()))
+                .collect(toSet());
         System.out.println(addressSet);
     }
 }

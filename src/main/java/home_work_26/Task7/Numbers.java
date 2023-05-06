@@ -3,6 +3,7 @@ package home_work_26.Task7;
 import java.util.List;
 import java.util.stream.IntStream;
 
+// все гуд
 public class Numbers {
     public static void main(String[] args) {
 
