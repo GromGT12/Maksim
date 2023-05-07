@@ -3,9 +3,6 @@ package home_work_27.Task1;
 import java.time.LocalDate;
 import java.util.Objects;
 
-/*
-
- */
 public class Abonent {
     private String name;
     private String surname;
