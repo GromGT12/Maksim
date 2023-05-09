@@ -16,8 +16,7 @@ public class ServiceAbonent {
         return stringMap;
     }
 
-    // этот метод лучше назвать groupByCity или подобным образом, он не фильтрует абонентов
-    public Map<String, List<Abonent>> cityFiltering(List<Abonent> abonents) {
+    public Map<String, List<Abonent>> groupByCity(List<Abonent> abonents) {
         Map<String, List<Abonent>> abonentsCity = abonents.stream()
                 .collect(Collectors.groupingBy(Abonent::getCity));
         return abonentsCity;

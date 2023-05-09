@@ -4,12 +4,11 @@ import home_work_27.Task1.Abonent;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.IntSummaryStatistics;
 import java.util.List;
-
 
 public class Application {
     public static void main(String[] args) {
+
         ServiceAbonent serviceAbonent = new ServiceAbonent();
         List<Abonent> abonents = new ArrayList<>(List.of(
                 new Abonent("Maks", "Krymov", "1234", LocalDate.of(1990, 7, 11), LocalDate.of(2023, 5, 12), true, "Dubai"),
@@ -19,21 +18,10 @@ public class Application {
                 new Abonent("Jack", "Karter", "7724", LocalDate.of(1989, 2, 20), LocalDate.of(2017, 1, 5), false, "Krakow"),
                 new Abonent("Sveta", "Shtych", "6522", LocalDate.of(2001, 12, 5), LocalDate.of(2018, 3, 30), false, "Zurich")));
 
+        String contractStats = serviceAbonent.subscriberCountAge(abonents);
+        System.out.println(contractStats);
 
-        IntSummaryStatistics contractStats = serviceAbonent.subscriberCountAge(abonents);
-
-        System.out.printf("Calculate subscribers: %d%n", contractStats.getCount());
-        System.out.printf("Min age: %d%n", contractStats.getMin());
-        System.out.printf("Max age: %d%n", contractStats.getMax());
-        System.out.printf("Average age: %.2f%n", contractStats.getAverage());
-
-        System.out.println("--------------------------------");
-
-        IntSummaryStatistics contractStatsVip = serviceAbonent.subscriberCountAgeVip(abonents);
-
-        System.out.printf("Number subscribers vip %d%n ", contractStatsVip.getCount());
-        System.out.printf("Max contract vip: %d%n", contractStatsVip.getMax());
-        System.out.printf("Average contract vip: %.2f%n ", contractStatsVip.getAverage());
-
+        String subscriberCountVip = serviceAbonent.subscriberCountAgeVip(abonents);
+        System.out.println(subscriberCountVip);
     }
 }

@@ -21,7 +21,7 @@ public class Application {
         Map<String, Abonent> stringMap = serviceAbonent.filteringNotVip(abonents);
         System.out.println(stringMap);
 
-        Map<String, List<Abonent>> abonentsCity = serviceAbonent.cityFiltering(abonents);
+        Map<String, List<Abonent>> abonentsCity = serviceAbonent.groupByCity(abonents);
         System.out.println(abonentsCity);
 
     }
