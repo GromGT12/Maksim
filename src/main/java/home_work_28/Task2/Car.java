@@ -10,7 +10,6 @@ public record Car(
        String title,
        String description,
        String city,
-       String status,
-         List<ListCarAdverstisement>listCarAdverstisementList
+       String status
 ) {
 }

@@ -16,11 +16,18 @@ public class AdverstisementJson {
         List<JacksonAdvertisement> filterCar = objectMapper.readValue(resource, new TypeReference<>() {
         });
         System.out.println(filterCar);
+        // до этого момента код работает, сделайте оставшуюся часть
+        /*
+        Отфильтруйте список, оставив обявления, где город - НЕ Минск. Сериализуте результат в строку, запишите ее
+в файл cars_not_from_minsk.json
+         */
 
-        resource = ClassLoader.getSystemResourceAsStream("Task2/Advertisement.Json");
+
+        // этот код я закоментил, тк он не будет работать и он по задаче не нужен
+        /*resource = ClassLoader.getSystemResourceAsStream("Task2/Advertisement.Json");
         Car car = objectMapper.readValue(resource, Car.class);
 
-        System.out.println(car);
+        System.out.println(car);*/
 
     }
 }

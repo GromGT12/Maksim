@@ -1,15 +1,16 @@
 package home_work_28.Task2;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.List;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class JacksonAdvertisement {
     private String id;
     private String title;
     private String description;
     private String city;
     private String status;
-    private List<ListCarAdverstisement> listCarAdverstisementList;
-
 
     public String getId() {
         return id;
