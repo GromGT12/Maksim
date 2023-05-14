@@ -1,14 +1,17 @@
 package home_work_28.Task1;
 
-import java.util.List;
-
 public class PostUsersXml {
     private String UserId;
     private String id;
     private String title;
     private String body;
 
-    private List<CharacteristicsOfUsers> characteristics;
+    public PostUsersXml(String userId, String id, String title, String body) {
+        UserId = userId;
+        this.id = id;
+        this.title = title;
+        this.body = body;
+    }
 
     public String getUserId() {
         return UserId;
@@ -42,13 +45,6 @@ public class PostUsersXml {
         this.body = body;
     }
 
-    public List<CharacteristicsOfUsers> getCharacteristics() {
-        return characteristics;
-    }
-
-    public void setCharacteristics(List<CharacteristicsOfUsers> characteristics) {
-        this.characteristics = characteristics;
-    }
 
     @Override
     public String toString() {
@@ -57,7 +53,6 @@ public class PostUsersXml {
                 ", id='" + id + '\'' +
                 ", title='" + title + '\'' +
                 ", body='" + body + '\'' +
-                ", characteristics=" + characteristics +
                 '}';
     }
 }

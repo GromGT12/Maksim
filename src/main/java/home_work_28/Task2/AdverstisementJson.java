@@ -27,11 +27,5 @@ public class AdverstisementJson {
         File file = new File("src/main/java/home_work_28/Task2/cars_not_from_minsk.json");
         objectMapper.writeValue(file, jacksonAdvertisement);
 
-
-        // до этого момента код работает, сделайте оставшуюся часть
-        /*
-        Отфильтруйте список, оставив обявления, где город - НЕ Минск. Сериализуте результат в строку, запишите ее
-в файл cars_not_from_minsk.json
-         */
     }
 }
