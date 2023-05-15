@@ -25,8 +25,10 @@ class GreetingServiceTest {
         GreetingService greetingService = new GreetingService();
         String name = "";
         //when
-        assertThrows(IllegalArgumentException.class, () -> greetingService.greet(name));
+        // здесь также можно проверить сообщение, с который был брошен экспешен
+        IllegalArgumentException actual = assertThrows(IllegalArgumentException.class, () -> greetingService.greet(name));
         //then
+        assertEquals(actual.getMessage(), "имя не может быть пустой строкой");
     }
 
     @Test
@@ -35,6 +37,7 @@ class GreetingServiceTest {
         GreetingService greetingService = new GreetingService();
         String name = null;
         //when
+        // здесь также можно проверить сообщение, с который был брошен экспешен
         assertThrows(IllegalArgumentException.class, () -> greetingService.greet(name));
         //then
     }
