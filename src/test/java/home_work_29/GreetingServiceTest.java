@@ -25,6 +25,7 @@ class GreetingServiceTest {
         GreetingService greetingService = new GreetingService();
         String name = "";
         //when
+        String expected = "Приветсвую тебя, Pavel";
         // здесь также можно проверить сообщение, с который был брошен экспешен
         IllegalArgumentException actual = assertThrows(IllegalArgumentException.class, () -> greetingService.greet(name));
         //then
@@ -37,6 +38,7 @@ class GreetingServiceTest {
         GreetingService greetingService = new GreetingService();
         String name = null;
         //when
+        String expected = "Приветсвую тебя, Pavel";
         // здесь также можно проверить сообщение, с который был брошен экспешен
         assertThrows(IllegalArgumentException.class, () -> greetingService.greet(name));
         //then
