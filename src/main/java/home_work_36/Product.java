@@ -26,10 +26,6 @@ public class Product {
     private static final String NAME = "pingwit";
     private static final String PASSWORD = "pingwit_password";
 
-    public Product(int anInt, String string, String string1, double aDouble) {
-
-    }
-
     public static void main(String[] args) {
         runSelectAllQuery();
     }
@@ -40,13 +36,13 @@ public class Product {
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(URL, NAME, PASSWORD);
 
-            PreparedStatement statement = connection.prepareStatement("SELECT * FROM products");
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM products LIMIT 2 OFFSET 0");
             ResultSet resultSet = statement.executeQuery();
 
-            List<Product> productList = new ArrayList<>();
+            List<ProductRecord> productList = new ArrayList<>();
             while (resultSet.next()) {
-                Product product = new Product(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getDouble(4));
-                productList.add(product);
+                ProductRecord productRecord = new ProductRecord(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getDouble(4));
+                productList.add(productRecord);
             }
 
             productList.forEach(System.out::println);
