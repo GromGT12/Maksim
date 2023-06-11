@@ -19,6 +19,7 @@ public class Application {
         truck3.join();
         truck4.join();
 
+
         System.out.println(gravelHeap.getWeight());
     }
 }
