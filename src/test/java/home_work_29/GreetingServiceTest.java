@@ -40,7 +40,8 @@ class GreetingServiceTest {
         //when
         String expected = "Приветсвую тебя, Pavel";
         // здесь также можно проверить сообщение, с который был брошен экспешен
-        assertThrows(IllegalArgumentException.class, () -> greetingService.greet(name));
+        IllegalArgumentException actual = assertThrows(IllegalArgumentException.class, () -> greetingService.greet(name));
         //then
+
     }
 }

@@ -21,8 +21,9 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+// плиз назови класс более информативно
 public class Product {
-    private static final String URL = "jdbc:postgresql://localhost:5432/home_work_from_backup";
+    private static final String URL = "jdbc:postgresql://localhost:5432/pingwit_shop";
     private static final String NAME = "pingwit";
     private static final String PASSWORD = "pingwit_password";
 
@@ -30,6 +31,7 @@ public class Product {
         runSelectAllQuery();
     }
 
+    // плиз назови метод более информативно
     public static void runSelectAllQuery() {
 
         try {
@@ -39,6 +41,7 @@ public class Product {
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM products LIMIT 2 OFFSET 0");
             ResultSet resultSet = statement.executeQuery();
 
+            // нужна доработка - нужно распчататать все продукты, но за одну итерацию печатать только 2 шт
             List<ProductRecord> productList = new ArrayList<>();
             while (resultSet.next()) {
                 ProductRecord productRecord = new ProductRecord(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getDouble(4));

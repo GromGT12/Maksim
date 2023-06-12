@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+// плиз назови класс более инфтрмативно
 public class CreateTable {
     private static final String URL = "jdbc:postgresql://localhost:5432/home_work_from_backup";
     private static final String NAME = "pingwit";
@@ -13,6 +14,8 @@ public class CreateTable {
     public static void main(String[] args) {
         runSelectAllQuery();
     }
+
+    // плиз назови метод более информативно
     public static void runSelectAllQuery() {
 
         try {
@@ -23,6 +26,7 @@ public class CreateTable {
             ProductRecord productRecord2 = new ProductRecord(56, "Nuts", "Charge your brains", 1.60);
             ProductRecord productRecord3 = new ProductRecord(77, "Stimorol", "Taste on the brink", 1.10);
 
+            // такой подход работает, но что, если нужно вставить 15 записей? нужно использовать цикл, попрпавь, плиз
             PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO products(id, name, description, price) VALUES (?, ?, ?, ?)");
             preparedStatement.setInt(1, productRecord.id());
             preparedStatement.setString(2, productRecord.name());
