@@ -56,7 +56,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
+        return "ProductDatabase{" +
                 "id=" + id +
                 ", product='" + product + '\'' +
                 ", description='" + description + '\'' +
