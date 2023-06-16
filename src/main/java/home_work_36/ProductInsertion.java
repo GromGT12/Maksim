@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class ProductInsertion {
     private static final String URL = "jdbc:postgresql://localhost:5432/home_work_from_backup";
     private static final String NAME = "pingwit";
