@@ -23,6 +23,7 @@ public class NewTransactionOrder {
 
             String insertOrderQuery = "INSERT INTO orders (id, user_id, created_at, status_id, comment) VALUES (?, ?, ?, ?, ?)";
             PreparedStatement orderStatement = connection.prepareStatement(insertOrderQuery);
+
             orderStatement.setInt(1, 60);
             orderStatement.setInt(2, 12);
             orderStatement.setDate(3, Date.valueOf("2025-09-12"));
@@ -42,7 +43,6 @@ public class NewTransactionOrder {
             transactionRecordList.add(transactionRecord1);
             transactionRecordList.add(transactionRecord2);
 
-
             for (TransactionRecord record : transactionRecordList) {
                 orderItemStatement.setInt(1, record.id());
                 orderItemStatement.setInt(2, record.order_id());
@@ -51,6 +51,7 @@ public class NewTransactionOrder {
                 orderItemStatement.addBatch();
                 System.out.println(record);
             }
+
             orderItemStatement.executeBatch();
             connection.commit();
             System.out.println("Транзакция успешно завершена.");
