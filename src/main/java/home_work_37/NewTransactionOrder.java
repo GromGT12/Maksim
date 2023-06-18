@@ -21,39 +21,38 @@ public class NewTransactionOrder {
 
             connection.setAutoCommit(false);
 
-
             String insertOrderQuery = "INSERT INTO orders (id, user_id, created_at, status_id, comment) VALUES (?, ?, ?, ?, ?)";
             PreparedStatement orderStatement = connection.prepareStatement(insertOrderQuery);
-            orderStatement.setInt(1, 54);
+            orderStatement.setInt(1, 60);
             orderStatement.setInt(2, 12);
             orderStatement.setDate(3, Date.valueOf("2025-09-12"));
             orderStatement.setInt(4, 12);
             orderStatement.setString(5, "New order");
             orderStatement.executeUpdate();
 
-
-            TransactionRecord transactionRecord = new TransactionRecord(10, 54, 31, 1);
-            TransactionRecord transactionRecord1 = new TransactionRecord(13, 54, 131, 2);
-            TransactionRecord transactionRecord2 = new TransactionRecord(14, 54, 11, 3);
+            TransactionRecord transactionRecord = new TransactionRecord(10, 60, 31, 1);
+            TransactionRecord transactionRecord1 = new TransactionRecord(13, 60, 131, 2);
+            TransactionRecord transactionRecord2 = new TransactionRecord(14, 60, 11, 3);
 
             String insertOrderItemQuery = "INSERT INTO order_items (id, order_id, product_id, quantity) VALUES (?, ?, ?, ?)";
             PreparedStatement orderItemStatement = connection.prepareStatement(insertOrderItemQuery);
-            orderItemStatement.setInt(1, transactionRecord.id());
-            orderItemStatement.setInt(2, transactionRecord.order_id());
-            orderItemStatement.setInt(3, transactionRecord.product_id());
-            orderItemStatement.setInt(4, transactionRecord.quantity());
-            orderItemStatement.executeUpdate();
-
 
             List<TransactionRecord> transactionRecordList = new ArrayList<>();
             transactionRecordList.add(transactionRecord);
             transactionRecordList.add(transactionRecord1);
             transactionRecordList.add(transactionRecord2);
 
-            for (TransactionRecord record : transactionRecordList)
-                System.out.println(record);
-            connection.commit();
 
+            for (TransactionRecord record : transactionRecordList) {
+                orderItemStatement.setInt(1, record.id());
+                orderItemStatement.setInt(2, record.order_id());
+                orderItemStatement.setInt(3, record.product_id());
+                orderItemStatement.setInt(4, record.quantity());
+                orderItemStatement.addBatch();
+                System.out.println(record);
+            }
+            orderItemStatement.executeBatch();
+            connection.commit();
             System.out.println("Транзакция успешно завершена.");
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
