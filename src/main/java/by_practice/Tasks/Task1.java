@@ -1,4 +1,4 @@
-package home_work_ArrayNumber;
+package by_practice.Tasks;
 
 public class Task1 {
     public static void main(String[] args) {
