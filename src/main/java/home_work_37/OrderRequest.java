@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NewTransactionOrder {
+public class OrderRequest {
     private static final String URL = "jdbc:postgresql://localhost:5432/home_work_from_backup";
     private static final String NAME = "pingwit";
     private static final String PASSWORD = "pingwit_password";
@@ -31,30 +31,31 @@ public class NewTransactionOrder {
             orderStatement.setString(5, "New order");
             orderStatement.executeUpdate();
 
-            TransactionRecord transactionRecord = new TransactionRecord(10, 60, 31, 1);
-            TransactionRecord transactionRecord1 = new TransactionRecord(13, 60, 131, 2);
-            TransactionRecord transactionRecord2 = new TransactionRecord(14, 60, 11, 3);
+            OrderItem transactionRecord = new OrderItem(10, 60, 31, 1);
+            OrderItem transactionRecord1 = new OrderItem(13, 60, 131, 2);
+            OrderItem transactionRecord2 = new OrderItem(14, 60, 11, 3);
 
             String insertOrderItemQuery = "INSERT INTO order_items (id, order_id, product_id, quantity) VALUES (?, ?, ?, ?)";
-            PreparedStatement orderItemStatement = connection.prepareStatement(insertOrderItemQuery);
+            PreparedStatement orderItem = connection.prepareStatement(insertOrderItemQuery);
 
-            List<TransactionRecord> transactionRecordList = new ArrayList<>();
-            transactionRecordList.add(transactionRecord);
-            transactionRecordList.add(transactionRecord1);
-            transactionRecordList.add(transactionRecord2);
+            List<OrderItem> CreateOrderItem = new ArrayList<>();
+            CreateOrderItem.add(transactionRecord);
+            CreateOrderItem.add(transactionRecord1);
+            CreateOrderItem.add(transactionRecord2);
 
-            for (TransactionRecord record : transactionRecordList) {
-                orderItemStatement.setInt(1, record.id());
-                orderItemStatement.setInt(2, record.order_id());
-                orderItemStatement.setInt(3, record.product_id());
-                orderItemStatement.setInt(4, record.quantity());
-                orderItemStatement.addBatch();
+            for (OrderItem record : CreateOrderItem) {
+                orderItem.setInt(1, record.id());
+                orderItem.setInt(2, record.order_id());
+                orderItem.setInt(3, record.product_id());
+                orderItem.setInt(4, record.quantity());
+                orderItem.addBatch();
                 System.out.println(record);
             }
 
-            orderItemStatement.executeBatch();
+            orderItem.executeBatch();
             connection.commit();
             System.out.println("Транзакция успешно завершена.");
+
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
 
