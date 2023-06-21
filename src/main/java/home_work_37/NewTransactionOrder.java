@@ -4,6 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+// комменты такие же, как и у Ильи
 public class NewTransactionOrder {
     private static final String URL = "jdbc:postgresql://localhost:5432/home_work_from_backup";
     private static final String NAME = "pingwit";
