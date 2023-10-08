@@ -1,4 +1,4 @@
-package by_practice.Thread;
+package by_practice.thread;
 
 
 public class DaemonThreadDemo {
