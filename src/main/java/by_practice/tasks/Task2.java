@@ -1,4 +1,4 @@
-package by_practice.Tasks;
+package by_practice.tasks;
 
 public class Task2 {
     public static void main(String[] args) {

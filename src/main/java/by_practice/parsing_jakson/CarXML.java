@@ -1,4 +1,4 @@
-package by_practice.Parsing_Jakson;
+package by_practice.parsing_jakson;
 
 public class CarXML {
     private String model;

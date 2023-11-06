@@ -1,8 +1,4 @@
-<<<<<<< HEAD:src/main/java/by_practice/Tasks/TextFormatter.java
-package by_practice.Tasks;
-=======
-package home_work_ArrayNumber;
->>>>>>> origin/Home_work:src/main/java/home_work_ArrayNumber/TextFormatter.java
+package by_practice.tasks;
 
 import java.util.ArrayList;
 import java.util.List;

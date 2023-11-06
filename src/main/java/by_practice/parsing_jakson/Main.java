@@ -1,4 +1,4 @@
-package by_practice.Parsing_Jakson;
+package by_practice.parsing_jakson;
 
 
 import org.w3c.dom.*;

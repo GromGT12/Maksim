@@ -1,4 +1,4 @@
-package by_practice.Tasks;
+package by_practice.tasks;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
