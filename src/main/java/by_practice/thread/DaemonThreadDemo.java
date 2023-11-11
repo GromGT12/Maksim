@@ -11,7 +11,7 @@ public class DaemonThreadDemo {
         // Любой новый поток, созданный из главного потока, также не является демон-потоком (пользовательский поток)
         Runnable task = new Task();
         Thread t1 = new Thread(task, "T1");
-        System.out.println("Поток создан из нового потока");
+        System.out.println("A thread is created from a new thread");
         System.out.println("name: " + name + ", isDaemon: " + isDaemon);
 
         // Делаю поток демоном, вызвав setDaemon(), перед его запуском, как показано ниже:
@@ -26,12 +26,12 @@ public class DaemonThreadDemo {
         @Override
         public void run() {
             Thread t = Thread.currentThread();
-            System.out.println("Поток сделан демоном с мопощью метода setDaemon");
+            System.out.println("The thread is made a daemon using a method setDaemon");
             System.out.println("name: " + t.getName() + ", isDaemon: " + t.isDaemon());
 
             // Любой новый поток, созданный из демон-потока, также будет демоном
             Thread t2 = new Thread("T2");
-            System.out.println("Поток создан из потока демона");
+            System.out.println("A thread is created from a daemon thread");
             System.out.println("name: + " + t2.getName() + ", isDaemon: " + t2.isDaemon());
 
 

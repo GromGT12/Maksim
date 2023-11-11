@@ -9,14 +9,12 @@ public class StreamAPI {
 
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
-        int sumNotParralel = numbers.stream()
+        int sumNotParallel = numbers.stream()
                 .filter(n -> n % 2 == 0)
                 .mapToInt(Integer::intValue)
                 .sum();
 
-        System.out.println("Выводим не паралелный поток" + sumNotParralel);
-
-        List<Integer> numbers2 = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        System.out.println("Outputting a non-parallel thread" + sumNotParallel);
 
         // Создание параллельного стрима
         Stream<Integer> parallelStream = numbers.parallelStream();
@@ -26,7 +24,7 @@ public class StreamAPI {
                 .filter(n -> n % 2 == 0)
                 .mapToInt(Integer::intValue)
                 .sum();
-        System.out.println("Вывод паралельного потока" + sum2);
+        System.out.println("Output of a parallel thread" + sum2);
     }
 }
 

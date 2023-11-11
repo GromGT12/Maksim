@@ -6,7 +6,7 @@ public class Task3 {
         for (int i = 0; i < array.length; i++) {
             int myInt = array[i];
             int result = myInt / 3;
-            System.out.printf("Результат делания %d на 3: %d", myInt, result);
+            System.out.printf("The outcome of the action %d at 3: %d", myInt, result);
             System.out.println();
         }
     }
