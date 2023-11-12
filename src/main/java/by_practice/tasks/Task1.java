@@ -13,6 +13,6 @@ public class Task1 {
             System.out.println(myString.length());
             sum += myString.length();
         }
-        System.out.println("Длина всех строк " + sum);
+        System.out.println("Length of all strings " + sum);
     }
 }
