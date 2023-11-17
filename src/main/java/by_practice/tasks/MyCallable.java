@@ -4,25 +4,24 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
-    public class MyCallable implements Callable<Integer> {
-        @Override
-        public Integer call() throws Exception {
-            // Выполняем вычисления и возвращаем результат
-            return 42;
-        }
+public class MyCallable implements Callable<Integer> {
+    @Override
+    public Integer call() throws Exception {
 
-        public static class Main {
-            public static void main(String[] args) throws InterruptedException, ExecutionException {
-                Callable<Integer> callable = new MyCallable();
-                FutureTask<Integer> futureTask = new FutureTask<>(callable);
+        return 42;
+    }
 
-                Thread thread = new Thread(futureTask);
-                thread.start();
+    public static class Main {
+        public static void main(String[] args) throws InterruptedException, ExecutionException {
+            Callable<Integer> callable = new MyCallable();
+            FutureTask<Integer> futureTask = new FutureTask<>(callable);
 
-                // Получаем результат выполнения задачи
-                Integer result = futureTask.get();
-                System.out.println("Результат: " + result);
-            }
+            Thread thread = new Thread(futureTask);
+            thread.start();
+
+            Integer result = futureTask.get();
+            System.out.println("Результат: " + result);
         }
     }
+}
 

@@ -13,13 +13,11 @@ public class Car {
 
     @Override
     public int hashCode() {
-        // Простейший способ создать хэш-код: сложим хэши полей
         return Objects.hash(brand, model);
     }
 
     @Override
     public boolean equals(Object obj) {
-        // Два объекта Car равны, если у них совпадают brand и model
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         Car otherCar = (Car) obj;

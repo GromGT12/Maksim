@@ -16,7 +16,7 @@ public class LongestSubstring {
 
     public static void main(String[] args) {
         LongestSubstring longestSubstring = new LongestSubstring();
-        String input = "abcabcbb"; // Замените строкой, которую вы хотите проверить
+        String input = "abcabcbb";
         int result = longestSubstring.lengthOfLongestSubstring(input);
         System.out.println("Длина наибольшей подстроки: " + result);
     }
