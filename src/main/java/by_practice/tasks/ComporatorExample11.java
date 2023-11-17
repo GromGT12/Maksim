@@ -2,7 +2,7 @@ package by_practice.tasks;
 
 import java.util.*;
 
-public class ComporatorExample {
+public class ComporatorExample11 {
 
     public static void main(String[] args) {
         List<String> names = new ArrayList<>(Arrays.asList("John", "Alice", "Bob", "Eve", null, "Charlie"));
