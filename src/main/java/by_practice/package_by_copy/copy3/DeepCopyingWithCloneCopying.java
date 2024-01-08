@@ -1,4 +1,4 @@
-package by_practice.copy3;
+package by_practice.package_by_copy.copy3;
 
 public class DeepCopyingWithCloneCopying {
     public static void main(String[] args) throws CloneNotSupportedException {

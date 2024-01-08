@@ -1,4 +1,4 @@
-package by_practice.copy2;
+package by_practice.package_by_copy.copy2;
 
 public class Product implements Cloneable {
     private String name;

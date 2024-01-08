@@ -1,4 +1,4 @@
-package by_practice.copy4;
+package by_practice.package_by_copy.copy4;
 
 import java.io.*;
 
