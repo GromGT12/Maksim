@@ -8,7 +8,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class Transaction11 {
+public class Transaction {
 
     private static final String URL = "jdbc:postgresql://localhost:5432/home_work_from_backup";
     private static final String USERNAME = "pingwit";
