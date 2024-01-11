@@ -1,4 +1,4 @@
-package by_practice.copy2;
+package by_practice.package_by_copy.copy2;
 
 public class ShallowCopyingWithCloneCopying {
     public static void main(String[] args) throws CloneNotSupportedException {

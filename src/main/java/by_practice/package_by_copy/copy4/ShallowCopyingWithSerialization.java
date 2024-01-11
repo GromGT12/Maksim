@@ -1,4 +1,4 @@
-package by_practice.copy4;
+package by_practice.package_by_copy.copy4;
 
 public class ShallowCopyingWithSerialization {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package by_practice.copy;
+package by_practice.package_by_copy.copy_shallow;
 
 public class ShallowCopying {
     public static void main(String[] args) {
