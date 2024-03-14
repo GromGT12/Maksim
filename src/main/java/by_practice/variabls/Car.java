@@ -21,6 +21,9 @@ public class Car {
         carCount++;                 // Увеличиваем счетчик созданных машин
     }
 
+    public Car(String toyota, String camry, int numberOfDoors, String black, int i) {
+    }
+
     // Метод для запуска двигателя
     public void startEngine() {
         this.engineRunning = true;
@@ -84,5 +87,9 @@ public class Car {
 
         // Остановка двигателя второй машины
         car2.stopEngine();
+    }
+
+    public static <T> int getYear(T t) {
+        return getYear(carCount);
     }
 }
