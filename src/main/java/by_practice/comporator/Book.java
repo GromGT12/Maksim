@@ -1,20 +1,26 @@
 package by_practice.comporator;
+import java.util.*;
 
 public class Book implements Comparable<Book> {
     private String title;
     private String author;
-    private Integer pubicationYear;
+    private Integer publicationYear;
+    private double price;
 
-    public Book(String title, String author, Integer pubicationYear) {
+    public Book(String title, String author, Integer publicationYear, double price) {
         this.title = title;
         this.author = author;
-        this.pubicationYear = pubicationYear;
+        this.publicationYear = publicationYear;
+        this.price = price;
     }
 
+    public static int getPublicationYear(Book book) {
+        return book.publicationYear;
+    }
 
     @Override
     public int compareTo(Book otherBook) {
-        return Integer.compare(this.pubicationYear, otherBook.pubicationYear);
+        return Integer.compare(this.publicationYear, otherBook.publicationYear);
     }
 
     @Override
@@ -22,7 +28,7 @@ public class Book implements Comparable<Book> {
         return "Book{" +
                 "title='" + title + '\'' +
                 ", author='" + author + '\'' +
-                ", pubicationYear=" + pubicationYear +
+                ", publicationYear=" + publicationYear +
                 '}';
     }
 }
