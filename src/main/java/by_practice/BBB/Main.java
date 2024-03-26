@@ -3,10 +3,10 @@ import java.util.*;
 
 public class Main {
     private static class Phone {
-        private String brand;
-        private String model;
-        private int releaseYear;
-        private double price;
+        private final String brand;
+        private final String model;
+        private final int releaseYear;
+        private final double price;
 
         public Phone(String brand, String model, int releaseYear, double price) {
             this.brand = brand;
