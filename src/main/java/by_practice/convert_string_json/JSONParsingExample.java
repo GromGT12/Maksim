@@ -7,7 +7,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 
-public class JSONParsingExample {пе
+public class JSONParsingExample {
     public static void main(String[] args) throws Exception {
         // Пример объекта класса City
         City city = new City("London", "UK", 8982000, 1572.0);

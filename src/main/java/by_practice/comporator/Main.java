@@ -1,7 +1,5 @@
 package by_practice.comporator;
 
-import by_practice.tasks.ComporatorExample11;
-
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -20,5 +18,6 @@ public class Main {
         for (Book book : books) {
             System.out.println(book);
         }
+
     }
 }
